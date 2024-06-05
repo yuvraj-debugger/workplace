@@ -1,0 +1,3117 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <!-- Favicon -->
+    <link rel="icon" href="images/mini-logo-green.svg" sizes="any" type="image/svg+xml">
+    <title>Worksuit Tool</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <main class="main-wrapper">
+
+        <header class="header">
+            <div class="header-left">
+                <div class="miniLogo">
+                    <a href="index.html">
+                        <img src="images/mini-logo.svg" alt="mini-logo" />
+                    </a>
+                </div>
+            </div>
+            <div class="header-center">
+                <h1>Softuvo Solutions</h1>
+            </div>
+            <a id="toggle_btn" href="javascript:void(0);">
+                <span class="bar-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </a>
+            <ul class="header-new-menu">
+                <li>
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">Clients</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="javascript:void(0);">Clients</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">Projects</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="javascript:void(0);">Projects</a>
+                        <a class="dropdown-item" href="javascript:void(0);">Tasks</a>
+                        <a class="dropdown-item" href="javascript:void(0);">Task Board</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">Leads</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="javascript:void(0);">Leads</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">Tickets</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="javascript:void(0);">Tickets</a>
+                    </div>
+                </li>
+            </ul>
+            <a id="mobile_btn" class="mobile_btn" href="#sidebar"><i class="fa-solid fa-bars"></i></a>
+            <div class="user-menu">
+                <div class="searchbar">
+                    <input class="searchbar__field" type="search" placeholder="Search here">
+                    <button class="searchbar__button" type="button"><i
+                            class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div class="headerIcons">
+                    <ul>
+                        <li class="headerIcons__icon"><button type="button"><img src="images/header/check-icon.svg"
+                                    alt=""> <span class="counter">2</span></button></li>
+                        <li class="headerIcons__icon"><button type="button"><img src="images/header/time-icon.svg"
+                                    alt=""> <span class="counter">5</span></button></li>
+                        <li class="headerIcons__icon"><button type="button"><img src="images/header/add-icon.svg"
+                                    alt=""> <span class="counter">2</span></button></li>
+                        <li class="headerIcons__icon"><button type="button"><img src="images/header/bell-icon.svg"
+                                    alt=""> <span class="counter">12</span></button></li>
+                    </ul>
+                </div>
+                <div class="avatar">
+                    <div class="dropdown">
+                        <button class="avatar__button dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <img class="avatar__image" src="images/user-img.jpg" alt="user-img" />
+                            <span>Franklin Jr.</span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a href="javascript:void(0);">My Profile</a></li>
+                            <li><a href="javascript:void(0);">Setting</a></li>
+                            <li><a href="javascript:void(0);">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header><!--Header End-->
+
+        <div class="sidebar" id="sidebar">
+            <div class="slimScrollDiv">
+                <div class="sidebar-left slimscroll">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a href="javascript:void(0);" class="nav-link active" id="home-tab" data-bs-toggle="tab"
+                                data-bs-target="#home" type="button" role="tab" aria-controls="home"
+                                aria-selected="true"><span data-bs-delay='{"show":"1000", "hide":"0"}'
+                                    data-bs-offset="0,10" data-bs-toggle="tooltip" data-bs-placement="right"
+                                    data-bs-title="Home"><img src="images/navbar/home-icon.svg" alt="" /></span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:void(0);" class="nav-link" id="app-tab" data-bs-toggle="tab"
+                                data-bs-target="#app" type="button" role="tab" aria-controls="app"
+                                aria-selected="false"><span data-bs-delay='{"show":"1000", "hide":"0"}'
+                                    data-bs-offset="0,10" data-bs-toggle="tooltip" data-bs-placement="right"
+                                    data-bs-title="App"><img src="images/navbar/app-icon.svg" alt="" /></span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:void(0);" class="nav-link" id="employees-tab" data-bs-toggle="tab"
+                                data-bs-target="#employees" type="button" role="tab" aria-controls="employees"
+                                aria-selected="false"><span data-bs-delay='{"show":"1000", "hide":"0"}'
+                                    data-bs-offset="0,10" data-bs-toggle="tooltip" data-bs-placement="right"
+                                    data-bs-title="Employees"><img src="images/navbar/employees-icon.svg"
+                                        alt="" /></span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:void(0);" class="nav-link" id="clients-tab" data-bs-toggle="tab"
+                                data-bs-target="#clients" type="button" role="tab" aria-controls="clients"
+                                aria-selected="false"><span data-bs-delay='{"show":"1000", "hide":"0"}'
+                                    data-bs-offset="0,10" data-bs-toggle="tooltip" data-bs-placement="right"
+                                    data-bs-title="Clients"><img src="images/navbar/clients-icon.svg"
+                                        alt="" /></span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sidebar-right">
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <p>HR</p>
+                        <ul>
+                            <li><a href="javascript:void(0);">Employee Profile</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="app" role="tabpanel" aria-labelledby="app-tab">
+                        <p>App</p>
+                        <ul>
+                            <li><a href="javascript:void(0);">Admin Dashboard</a></li>
+                            <li><a href="javascript:void(0);">Employee Dashboard</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="employees" role="tabpanel" aria-labelledby="employees-tab">
+                        <p>Employees</p>
+                        <ul>
+                            <li><a href="javascript:void(0);">Admin Dashboard</a></li>
+                            <li><a href="javascript:void(0);">Employee Dashboard</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="clients" role="tabpanel" aria-labelledby="clients-tab">
+                        <p>Clients</p>
+                        <ul>
+                            <li><a href="javascript:void(0);">Admin Dashboard</a></li>
+                            <li><a href="javascript:void(0);">Employee Dashboard</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div><!--Sidebar End-->
+
+        <div class="page-wrapper">
+            <div class="content container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-head-box">
+                            <h3>Profile</h3>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item">
+                                        <a href="index.html">Dashboard</a>
+                                    </li>
+                                    <li class="breadcrumb-item active" aria-current="page">Profile</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboardSection">
+                    <div class="dashboardSection__body commonBoxShadow rounded-1">
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-6 col-md-6">
+                                <div class="outerSection">
+                                    <div class="imgSection">
+                                        <img src="images/userImg.png" />
+                                    </div>
+
+                                    <div class="detailSection">
+                                        <h6 class="mb-1">Alex John</h6>
+                                        <small>Designing Department</small>
+
+                                        <p class="mb-1">UI Designer</p>
+                                        <p>Employee ID:<span> SSPLO1</span></p>
+                                        <a href="javascript:void(0);">Send Message</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-4 col-lg-6 col-md-6">
+                                <div class="commonDetail borderSection">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6">
+                                            <p>Email:</p>
+                                        </div>
+
+                                        <div class="col-lg-6 col-md-6">
+                                            <p class="green"><b>Alexjohn@gmail.com</b></p>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6">
+                                            <p>Password:</p>
+                                        </div>
+
+                                        <div class="col-lg-6 col-md-6">
+                                            <p class="green"><b>Softuvo@123</b></p>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6">
+                                            <p>Birth Date:</p>
+                                        </div>
+
+                                        <div class="col-lg-6 col-md-6">
+                                            <p><b>12 May 1990</b></p>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6">
+                                            <p>Joining Date:</p>
+                                        </div>
+
+                                        <div class="col-lg-6 col-md-6">
+                                            <p><b>12 May 1990</b></p>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6">
+                                            <p>Phone:</p>
+                                        </div>
+
+                                        <div class="col-lg-6 col-md-6">
+                                            <p><b>9876543210</b></p>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6">
+                                            <p>Reporting Manager:</p>
+                                        </div>
+
+                                        <div class="col-lg-6 col-md-6">
+                                            <p><b>Barry Cuda</b></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-4 col-lg-6 col-md-6">
+                                <div class="commonDetail">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6">
+                                            <p>Can this user login to the app?:</p>
+                                        </div>
+
+                                        <div class="col-lg-6 col-md-6">
+                                            <p><strong>Yes</strong></p>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6">
+                                            <p>Can this user receive email notification?</p>
+                                        </div>
+
+                                        <div class="col-lg-6 col-md-6">
+                                            <p><strong>No</strong></p>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6">
+                                            <p>Workplace:</p>
+                                        </div>
+
+                                        <div class="col-lg-6 col-md-6">
+                                            <p><strong>WFO</strong></p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-xl-1 col-lg-1 col-md-1">
+                                <div class="editProfile text-end">
+                                    <a data-bs-toggle="modal" data-bs-target="#personalInfo"
+                                        href="javascript:void(0);"><img src="images/editIcon.svg" /></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboardSection__body commonBoxShadow rounded-1 mt-5">
+                        <ul class="nav nav-pills commonTabs" id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="pills-personal-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-personal" type="button" role="tab"
+                                    aria-controls="pills-personal" aria-selected="true">Personal</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-account-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-account" type="button" role="tab"
+                                    aria-controls="pills-account" aria-selected="false">Accounts & Statutory</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-employment-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-employment" type="button" role="tab"
+                                    aria-controls="pills-employment" aria-selected="false">Employment & Job</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-additional-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-additional" type="button" role="tab"
+                                    aria-controls="pills-additional" aria-selected="false">Additional Details</button>
+                            </li>
+
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-payroll-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-payroll" type="button" role="tab"
+                                    aria-controls="pills-payroll" aria-selected="false">Payroll</button>
+                            </li>
+
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-documents-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-documents" type="button" role="tab"
+                                    aria-controls="pills-documents" aria-selected="false">Documents</button>
+                            </li>
+
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-attendance-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-attendance" type="button" role="tab"
+                                    aria-controls="pills-attendance" aria-selected="false">Attendance</button>
+                            </li>
+
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-leaves-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-leaves" type="button" role="tab" aria-controls="pills-leaves"
+                                    aria-selected="false">Leaves</button>
+                            </li>
+
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-salary-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-salary" type="button" role="tab" aria-controls="pills-salary"
+                                    aria-selected="false">Salary Slips</button>
+                            </li>
+
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-awards-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-awards" type="button" role="tab" aria-controls="pills-awards"
+                                    aria-selected="false">Awards & Recognitions</button>
+                            </li>
+
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-history-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-history" type="button" role="tab"
+                                    aria-controls="pills-history" aria-selected="false">Payroll History</button>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-content mt-5" id="pills-tabContent">
+                        <!-- personal tab starts -->
+                        <div class="tab-pane fade show active" id="pills-personal" role="tabpanel"
+                            aria-labelledby="pills-personal-tab" tabindex="0">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="profileCard commonBoxShadow rounded-1 mb-3">
+                                        <a class="editIcon" data-bs-toggle="modal" data-bs-target="#personalInfo2"
+                                            href="javascript:void(0);">
+                                            <img src="images/editIcon.svg" />
+                                        </a>
+                                        <h3>Personal Information</h3>
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4">
+                                                <p>Gender:</p>
+                                            </div>
+
+                                            <div class="col-lg-8 col-md-8">
+                                                <p><b>Male</b></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4">
+                                                <p>Whatsapp:</p>
+                                            </div>
+
+                                            <div class="col-lg-8 col-md-8">
+                                                <p><b>631-889-3206</b></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4">
+                                                <p>Personal Email:</p>
+                                            </div>
+
+                                            <div class="col-lg-8 col-md-8">
+                                                <p><b>12 May 1990</b></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4">
+                                                <p>Current Address:</p>
+                                            </div>
+
+                                            <div class="col-lg-8 col-md-8">
+                                                <p><b>1861 Bayonne Ave, Manchester Township, NJ, 08759</b></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4">
+                                                <p>Permanent Address:</p>
+                                            </div>
+
+                                            <div class="col-lg-8 col-md-8">
+                                                <p><b>1861 Bayonne Ave, Manchester Township, NJ, 08759</b></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4">
+                                                <p>Nationality<span class="red">*</span>:</p>
+                                            </div>
+
+                                            <div class="col-lg-8 col-md-8">
+                                                <p><b>Indian</b></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4">
+                                                <p>Religion:</p>
+                                            </div>
+
+                                            <div class="col-lg-8 col-md-8">
+                                                <p><b>Hindu</b></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4">
+                                                <p>Blood Group:</p>
+                                            </div>
+
+                                            <div class="col-lg-8 col-md-8">
+                                                <p><b>A+</b></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4">
+                                                <p>Martial Status<span class="red">*</span>:</p>
+                                            </div>
+
+                                            <div class="col-lg-8 col-md-8">
+                                                <p><b>Married</b></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4">
+                                                <p>Employment of spouse:</p>
+                                            </div>
+
+                                            <div class="col-lg-8 col-md-8">
+                                                <p><b>Private</b></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4">
+                                                <p>No. of Children:</p>
+                                            </div>
+
+                                            <div class="col-lg-8 col-md-8">
+                                                <p><b>0</b></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4">
+                                                <p>Passport No:</p>
+                                            </div>
+
+                                            <div class="col-lg-8 col-md-8">
+                                                <p><b>PA1234567</b></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4">
+                                                <p>Passport Expiry Date:</p>
+                                            </div>
+
+                                            <div class="col-lg-8 col-md-8">
+                                                <p><b>30 Dec 2024</b></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="profileCard commonBoxShadow rounded-1 mb-3">
+                                        <a class="editIcon" data-bs-toggle="modal" data-bs-target="#contactInfo"
+                                            href="javascript:void(0);">
+                                            <img src="images/editIcon.svg" />
+                                        </a>
+                                        <h3>Emergency Contact</h3>
+
+                                        <p class="green">Primary Contact</p>
+
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4">
+                                                <p>Name<span class="red">*</span>:</p>
+                                            </div>
+
+                                            <div class="col-lg-8 col-md-8">
+                                                <p><b>David Johns</b></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4">
+                                                <p>Relationship<span class="red">*</span>:
+                                                <p>
+                                            </div>
+
+                                            <div class="col-lg-8 col-md-8">
+                                                <p><b>Dad</b></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4">
+                                                <p>Phone<span class="red">*</span>:
+                                                <p>
+                                            </div>
+
+                                            <div class="col-lg-8 col-md-8">
+                                                <p><b>9876543220</b></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4">
+                                                <p>Phone No. 2<span class="red">*</span>:
+                                                <p>
+                                            </div>
+
+                                            <div class="col-lg-8 col-md-8">
+                                                <p><b>9876543230</b></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4">
+                                                <p>Email:
+                                                <p>
+                                            </div>
+
+                                            <div class="col-lg-8 col-md-8">
+                                                <p><b>Johndavid@gmail.com</b></p>
+                                            </div>
+                                        </div>
+
+                                        <hr />
+
+                                        <p class="green">Secondary Contact</p>
+
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4">
+                                                <p>Name<span class="red">*</span>:</p>
+                                            </div>
+
+                                            <div class="col-lg-8 col-md-8">
+                                                <p><b>David Johns</b></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4">
+                                                <p>Relationship<span class="red">*</span>:
+                                                <p>
+                                            </div>
+
+                                            <div class="col-lg-8 col-md-8">
+                                                <p><b>Dad</b></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4">
+                                                <p>Phone<span class="red">*</span>:
+                                                <p>
+                                            </div>
+
+                                            <div class="col-lg-8 col-md-8">
+                                                <p><b>9876543220</b></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4">
+                                                <p>Phone No. 2<span class="red">*</span>:
+                                                <p>
+                                            </div>
+
+                                            <div class="col-lg-8 col-md-8">
+                                                <p><b>9876543230</b></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4">
+                                                <p>Email:
+                                                <p>
+                                            </div>
+
+                                            <div class="col-lg-8 col-md-8">
+                                                <p><b>Johndavid@gmail.com</b></p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="profileCard commonBoxShadow rounded-1  mb-3">
+                                        <a class="editIcon" data-bs-toggle="modal" data-bs-target="#joiningDetail"
+                                            href="javascript:void(0);">
+                                            <img src="images/editIcon.svg" />
+                                        </a>
+                                        <h3>Joining Details</h3>
+
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4">
+                                                <p>Confirmation Date:</p>
+                                            </div>
+
+                                            <div class="col-lg-8 col-md-8">
+                                                <p><b>12 May 2016</b></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4">
+                                                <p>Notice Period:
+                                                <p>
+                                            </div>
+
+                                            <div class="col-lg-8 col-md-8">
+                                                <p><b>1 Months</b></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4">
+                                                <p>Probation Period:
+                                                <p>
+                                            </div>
+
+                                            <div class="col-lg-8 col-md-8">
+                                                <p><b>6 Months</b></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4">
+                                                <p>Other Terms:
+                                                <p>
+                                            </div>
+
+                                            <div class="col-lg-8 col-md-8">
+                                                <p><b>Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                        industry. </b></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="profileCard commonBoxShadow rounded-1 mb-3">
+                                        <a class="editIcon" data-bs-toggle="modal" data-bs-target="#officialContact"
+                                            href="javascript:void(0);">
+                                            <img src="images/editIcon.svg" />
+                                        </a>
+                                        <h3>Official Contact Information</h3>
+
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4">
+                                                <p>Redmine Username:</p>
+                                            </div>
+
+                                            <div class="col-lg-8 col-md-8">
+                                                <p><b>Alex.john</b></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4">
+                                                <p>Discord Username:
+                                                <p>
+                                            </div>
+
+                                            <div class="col-lg-8 col-md-8">
+                                                <p><b>AlexJohn#6230</b></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4">
+                                                <p>Skype ID:
+                                                <p>
+                                            </div>
+
+                                            <div class="col-lg-8 col-md-8">
+                                                <p><b>Alexjohn.upwork@gmail.com</b></p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="profileCard commonBoxShadow rounded-1 mb-3">
+                                        <a class="editIcon" data-bs-toggle="modal" data-bs-target="#familyInfo"
+                                            href="javascript:void(0);">
+                                            <img src="images/editIcon.svg" />
+                                        </a>
+                                        <h3>Family Information</h3>
+                                        <div class="commonTableResponsive familyInformation">
+                                            <table class="table">
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>Relationship</th>
+                                                    <th>Date of Birth</th>
+                                                    <th>Phone</th>
+                                                    <th>Address</th>
+                                                    <th>&nbsp;</th>
+                                                </tr>
+                                                <tr>
+                                                    <td data-label="Name">David Johns</td>
+                                                    <td data-label="Relationship">Dad</td>
+                                                    <td data-label="Date of Birth">02 February 1956</td>
+                                                    <td data-label="Phone">9876543230</td>
+                                                    <td data-label="Address">1861 Bayonne Ave, Manchester Township, NJ,
+                                                        08759</td>
+                                                    <td data-label="Action">
+                                                        <div class="dropdown">
+                                                            <a class="btn btn-secondary dropdown-toggle"
+                                                                href="javascript:void(0);" role="button"
+                                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                            </a>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a class="dropdown-item"
+                                                                        href="javascript:void(0);">Edit</a></li>
+                                                                <li><a class="dropdown-item"
+                                                                        href="javascript:void(0);">Delete</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <a class="addBtn" href="javascript:void(0);">Add New <img
+                                                src="images/addIcon.svg" /></a>
+                                    </div>
+
+                                    <div class="profileCard commonBoxShadow rounded-1 mb-3">
+                                        <a class="editIcon" data-bs-toggle="modal" data-bs-target="#eduInfo"
+                                            href="javascript:void(0);">
+                                            <img src="images/editIcon.svg" />
+                                        </a>
+                                        <h3>Education Information</h3>
+
+                                        <ul class="eduList">
+                                            <li>
+                                                <p><b>International College of Arts and Science (UG)</b></p>
+                                                <p>Bsc Computer Science</p>
+                                                <p>22 April 2013 - 22 April 2014 . A+</p>
+                                                <a href="javascript:void(0);"><img src="images/pdfIcon.svg" />
+                                                    <small>Institute
+                                                        Degree.pdf</small></a>
+                                            </li>
+
+                                            <li>
+                                                <p><b>International College of Arts and Science (UG)</b></p>
+                                                <p>Bsc Computer Science</p>
+                                                <p>22 April 2013 - 22 April 2014 . A+</p>
+                                                <a href="javascript:void(0);"><img src="images/pdfIcon.svg" />
+                                                    <small>Institute
+                                                        Degree.pdf</small></a>
+                                            </li>
+                                        </ul>
+                                        <a class="addBtn mt-4" href="javascript:void(0);">Add New <img
+                                                src="images/addIcon.svg" /></a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- personal ends -->
+
+                        <!-- account tab starts -->
+                        <div class="tab-pane fade" id="pills-account" role="tabpanel"
+                            aria-labelledby="pills-account-tab" tabindex="0">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="profileCard commonBoxShadow rounded-1 mb-3">
+                                        <a class="editIcon" data-bs-toggle="modal" data-bs-target="#bankInfo"
+                                            href="javascript:void(0);">
+                                            <img src="images/editIcon.svg" />
+                                        </a>
+                                        <h3>Bank Information</h3>
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6">
+                                                <p>Name as per Bank Records:</p>
+                                            </div>
+
+                                            <div class="col-lg-6 col-md-6">
+                                                <p class="green"><strong>Neha Guleria</strong></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6">
+                                                <p>Bank Name:</p>
+                                            </div>
+
+                                            <div class="col-lg-6 col-md-6">
+                                                <p class="green"><strong>ICICI Bank</strong></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6">
+                                                <p>Bank Account No:</p>
+                                            </div>
+
+                                            <div class="col-lg-6 col-md-6">
+                                                <p class=""><strong>12 May 1990</strong></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6">
+                                                <p>IFSC Code:</p>
+                                            </div>
+
+                                            <div class="col-lg-6 col-md-6">
+                                                <p class=""><strong>ICI24504</strong></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6">
+                                                <p>PAN No:</p>
+                                            </div>
+
+                                            <div class="col-lg-6 col-md-6">
+                                                <p class=""><strong>TC000Y56</strong></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="profileCard commonBoxShadow rounded-1 mb-3">
+                                        <a class="editIcon" data-bs-toggle="modal" data-bs-target="#statutoryInfo"
+                                            href="javascript:void(0);">
+                                            <img src="images/editIcon.svg" />
+                                        </a>
+                                        <h3>Bank & Statutory</h3>
+                                        <p class="green"><strong>ESI Account:</strong></p>
+
+                                        <div class="mb-3 form-check">
+                                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                            <label class="form-check-label" for="exampleCheck1">Employee is covered
+                                                under ESI</label>
+                                        </div>
+
+                                        <p class="warning"><span><img src="images/warningIcon.svg" /> Not covered under
+                                                ESI.</span></p>
+
+                                        <p class="green mt-5"><strong>PF Account:</strong></p>
+                                        <div class="mb-3 form-check">
+                                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                            <label class="form-check-label" for="exampleCheck1">Employee is covered
+                                                under PF</label>
+                                        </div>
+
+                                        <p><small><strong>PF KYC Not Done !</strong></small></p>
+                                        <p class="not-verify mt-3">
+                                            <span>No verified employee identify found.</span>
+                                        </p>
+
+                                        <p class="warning mt-3"><span><img src="images/warningIcon.svg" /> Not covered
+                                                under PF.</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- account tab ends -->
+
+                        <!-- employeement tab starts -->
+                        <div class="tab-pane fade" id="pills-employment" role="tabpanel"
+                            aria-labelledby="pills-employment-tab" tabindex="0">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="profileCard commonBoxShadow rounded-1 mb-3">
+                                        <a class="editIcon" href="javascript:void(0);">
+                                            <img src="images/editIcon.svg">
+                                        </a>
+                                        <h3>Experience Information</h3>
+
+                                        <ul class="eduList">
+                                            <li>
+                                                <p><b>Ui Designer at Softuvo Solutions</b></p>
+                                                <p><b>20 April 2017 - Present (6 years 9 months) . 8 Lac per annum</b>
+                                                </p>
+                                                <p>D-199, Phase 8B, Industrial Area, Sector 74, Sahibzada Ajit Singh
+                                                    Nagar, Punjab 160055</p>
+                                                <p>Shanky Gupta (Manager) . 0172 467 0301 . info@softuvo.com</p>
+                                            </li>
+
+                                            <li>
+                                                <p><b>Ui Designer at Zen Corporation</b></p>
+                                                <p><b>15 April 2013 - 15 April 2017 (5 years 9 months) . 4 Lac per
+                                                        annum</b></p>
+                                                <p>Ui designing, Ux, Interaction Design, Visula Design, Mobile and web
+                                                    App designs</p>
+                                                <p>D-199, Phase 8B, Industrial Area, Sector 74, Sahibzada Ajit Singh
+                                                    Nagar, Punjab 160055</p>
+                                                <p>Shanky Gupta (Manager) . 0172 467 0301 . info@softuvo.com</p>
+                                            </li>
+
+                                            <li>
+                                                <p><b>Ui Designer at Dalt Technology</b></p>
+                                                <p><b>01 January 2013 - 15 April 2013 (4 months) . 2 Lac per annum</b>
+                                                </p>
+                                                <p>Ui designing, Ux, Interaction Design, Visula Design, Mobile and web
+                                                    App designs</p>
+                                                <p>D-199, Phase 8B, Industrial Area, Sector 74, Sahibzada Ajit Singh
+                                                    Nagar, Punjab 160055</p>
+                                                <p>Shanky Gupta (Manager) . 0172 467 0301 . info@softuvo.com</p>
+                                            </li>
+                                        </ul>
+
+                                        <a class="addBtn" href="javascript:void(0);">Add New <img
+                                                src="images/addIcon.svg"></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- employeement tab ends -->
+
+                        <!-- additionalm information starts -->
+                        <div class="tab-pane fade" id="pills-additional" role="tabpanel"
+                            aria-labelledby="pills-additional-tab" tabindex="0">
+                            <div class="row">
+                                <div class="col-lg-5">
+                                    <div class="profileCard commonBoxShadow rounded-1 mb-3">
+                                        <a class="editIcon" data-bs-toggle="modal" data-bs-target="#additionalInfo"
+                                            href="javascript:void(0);">
+                                            <img src="images/editIcon.svg">
+                                        </a>
+                                        <h3>Additional Details</h3>
+
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6">
+                                                <p>Allergies:</p>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6">
+                                                <p><strong>No</strong></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6">
+                                                <p>Smoke:</p>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6">
+                                                <p><strong>Yes</strong></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6">
+                                                <p>Drink:</p>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6">
+                                                <p><strong>No</strong></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6">
+                                                <p>Diet:</p>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6">
+                                                <p><strong>Non-Veg</strong></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6">
+                                                <p>Hobbies:</p>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6">
+                                                <p><strong>Playing Badminton</strong></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- additional information ends -->
+
+                        <!-- payroll tab starts -->
+                        <div class="tab-pane fade" id="pills-payroll" role="tabpanel"
+                            aria-labelledby="pills-payroll-tab" tabindex="0">
+                            <div class="row">
+                                <div class="col-lg-5">
+                                    <div class="profileCard commonBoxShadow rounded-1 mb-3">
+                                        <a class="editIcon" data-bs-toggle="modal" data-bs-target="#payrollInfo"
+                                            href="javascript:void(0);">
+                                            <img src="images/editIcon.svg">
+                                        </a>
+                                        <h3>Payroll</h3>
+
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6">
+                                                <p>Annual CTC:</p>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6">
+                                                <p><strong>8,70,000</strong></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6">
+                                                <p>Basic Salary:</p>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6">
+                                                <p class="green"><strong>----</strong></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6">
+                                                <p>Allowances:</p>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6">
+                                                <p><strong>1500</strong></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6">
+                                                <p>Deductions:</p>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6">
+                                                <p><strong>2500</strong></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- payroll tab ends -->
+
+                        <!-- document tab starts -->
+                        <div class="tab-pane fade" id="pills-documents" role="tabpanel"
+                            aria-labelledby="pills-documents-tab" tabindex="0">
+                            <div class="row">
+                                <div class="col-lg-5">
+                                    <div class="profileCard commonBoxShadow rounded-1 mb-3">
+                                        <a class="editIcon" data-bs-toggle="modal" data-bs-target="#documentInfo"
+                                            href="javascript:void(0);">
+                                            <img src="images/editIcon.svg">
+                                        </a>
+                                        <h3>Documents</h3>
+
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4">
+                                                <p>Document Name:</p>
+                                            </div>
+                                            <div class="col-lg-8 col-md-8">
+                                                <p><strong><img src="images/pdfIcon.svg" /> Institute
+                                                        Degree.pdf</strong></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4">
+                                                <p>Document Type: </p>
+                                            </div>
+                                            <div class="col-lg-8 col-md-8">
+                                                <p class="green"><strong>.PDF File</strong></p>
+                                            </div>
+                                        </div>
+
+                                        <a class="addBtn mt-5" data-bs-toggle="modal" data-bs-target="#documentInfo"
+                                            href="javascript:void(0);">Add New <img src="images/addIcon.svg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- document tab ends -->
+
+                        <!-- attendance tab starts -->
+                        <div class="tab-pane fade" id="pills-attendance" role="tabpanel"
+                            aria-labelledby="pills-attendance-tab" tabindex="0">
+                            <div class="profileCard commonBoxShadow rounded-1 mb-3">
+                                <a class="editIcon" data-bs-toggle="modal" data-bs-target="#leavesInfo"
+                                    href="javascript:void(0);">
+                                    <img src="images/editIcon.svg">
+                                </a>
+                                <h3>Attendance</h3>
+
+                                <div class="pageFilter mb-3">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="leftFilters">
+                                                <div class="form-floating">
+                                                    <select class="form-select" id="floatingSelect"
+                                                        aria-label="Floating label select example">
+                                                        <option selected="">All</option>
+                                                        <option value="1">All</option>
+                                                        <option value="2">All</option>
+                                                        <option value="3">All</option>
+                                                    </select>
+                                                    <label for="floatingSelect">Employee</label>
+                                                </div>
+
+                                                <div class="form-floating">
+                                                    <select class="form-select" id="floatingSelect"
+                                                        aria-label="Floating label select example">
+                                                        <option selected="">All</option>
+                                                        <option value="1">All</option>
+                                                        <option value="2">All</option>
+                                                        <option value="3">All</option>
+                                                    </select>
+                                                    <label for="floatingSelect">Department</label>
+                                                </div>
+
+                                                <div class="form-floating">
+                                                    <select class="form-select" id="floatingSelect"
+                                                        aria-label="Floating label select example">
+                                                        <option selected="">January</option>
+                                                        <option value="1">February</option>
+                                                        <option value="2">March</option>
+                                                        <option value="3">April</option>
+                                                    </select>
+                                                    <label for="floatingSelect">Month</label>
+                                                </div>
+
+                                                <div class="form-floating">
+                                                    <select class="form-select" id="floatingSelect"
+                                                        aria-label="Floating label select example">
+                                                        <option selected="">2023</option>
+                                                        <option value="1">2022</option>
+                                                        <option value="2">2021</option>
+                                                        <option value="3">2020</option>
+                                                    </select>
+                                                    <label for="floatingSelect">Year</label>
+                                                </div>
+
+                                                <button class="btn btn-search"><img src="images/iconSearch.svg" />
+                                                    Search here</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="commonDataTable">
+                                    <div class="table-responsive">
+                                        <table class="table mt-5">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Date</th>
+                                                    <th>Punch In</th>
+                                                    <th>Punch Out</th>
+                                                    <th>Production</th>
+                                                    <th>Break</th>
+                                                    <th>Others</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>01 Jan 2016</td>
+                                                    <td>10 AM</td>
+                                                    <td>7 PM</td>
+                                                    <td>9 hrs</td>
+                                                    <td>1 hrs</td>
+                                                    <td>0</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>01 Jan 2016</td>
+                                                    <td>10 AM</td>
+                                                    <td>7 PM</td>
+                                                    <td>9 hrs</td>
+                                                    <td>1 hrs</td>
+                                                    <td>0</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>01 Jan 2016</td>
+                                                    <td>10 AM</td>
+                                                    <td>7 PM</td>
+                                                    <td>9 hrs</td>
+                                                    <td>1 hrs</td>
+                                                    <td>0</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>01 Jan 2016</td>
+                                                    <td>10 AM</td>
+                                                    <td>7 PM</td>
+                                                    <td>9 hrs</td>
+                                                    <td>1 hrs</td>
+                                                    <td>0</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div class="commonPagination my-2">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="commonPagination__content justify-content-end">
+                                                <p class="mb-0">Showing <span>1 to 10</span> of <span>16 entries</span>
+                                                </p>
+                                                <div class="paginationButton">
+                                                    <a href="javascript:void(0);">Previous</a>
+                                                    <a href="javascript:void(0);">1</a>
+                                                    <a href="javascript:void(0);">2</a>
+                                                    <a href="javascript:void(0);">Next</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- attendance tab ends -->
+
+                        <!-- Leaves tabs starts -->
+                        <div class="tab-pane fade" id="pills-leaves" role="tabpanel" aria-labelledby="pills-leaves-tab"
+                            tabindex="0">
+                            <div class="profileCard commonBoxShadow rounded-1 mb-3">
+                                <a class="editIcon">
+                                    <img src="images/editIcon.svg">
+                                </a>
+
+                                <h3>Leaves</h3>
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-6">
+                                        <div class="leaveCard">
+                                            <h4>20</h4>
+                                            <p>Annual Leave</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-3 col-6">
+                                        <div class="leaveCard">
+                                            <h4>10</h4>
+                                            <p>Medical Leave</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-3 col-6">
+                                        <div class="leaveCard">
+                                            <h4>5</h4>
+                                            <p>Other Leave</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-3 col-6">
+                                        <div class="leaveCard">
+                                            <h4>10</h4>
+                                            <p>Remaining Leave</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="pageFilter mb-3 mt-4 p-0">
+                                    <div class="row">
+                                        <div class="col-lg-5">
+                                            <div class="leftFilters">
+                                                <div class="form-floating position-reletive">
+                                                    <input type="text" class="form-control datePicker"
+                                                        placeholder="Date">
+                                                    <label for="floatingInput">Date</label>
+                                                    <span class="formIcon"><img src="images/calenderIcon.svg" /></span>
+                                                </div>
+
+                                                <div class="form-floating position-reletive">
+                                                    <input type="text" class="form-control" id="floatingPassword"
+                                                        placeholder="Password">
+                                                    <label for="floatingPassword">Year</label>
+                                                    <span class="formIcon"><img src="images/calenderIcon.svg" /></span>
+                                                </div>
+
+                                                <button class="btn btn-search"><img src="images/iconSearch.svg" />
+                                                    Search here</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="commonDataTable">
+                                    <div class="table-responsive">
+                                        <table class="table mt-3">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="flexCheckChecked">
+                                                        </div>
+                                                    </th>
+                                                    <th>Employee ID</th>
+                                                    <th>From</th>
+                                                    <th>To</th>
+                                                    <th>Leave Type</th>
+                                                    <th>Reason</th>
+                                                    <th>Leave Status</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="flexCheckChecked1">
+                                                        </div>
+                                                    </td>
+                                                    <td>SSPL01</td>
+                                                    <td>01 Jan 2016</td>
+                                                    <td>01 Jan 2016</td>
+                                                    <td>Casual Leave</td>
+                                                    <td>Urgent work at home</td>
+                                                    <td>
+                                                        <span class="badge badge-blue">Approved</span>
+                                                    </td>
+                                                    <td>
+                                                        <button class="btn btn-default" data-bs-toggle="modal"
+                                                            data-bs-target="#leavesInfo" href="javascript:void(0);">
+                                                            <img src="images/penIcon.svg" />
+                                                        </button>
+
+                                                        <button class="btn btn-default">
+                                                            <img src="images/deleteIcon.svg" />
+                                                        </button>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="flexCheckChecked1">
+                                                        </div>
+                                                    </td>
+                                                    <td>SSPL01</td>
+                                                    <td>01 Jan 2016</td>
+                                                    <td>01 Jan 2016</td>
+                                                    <td>Casual Leave</td>
+                                                    <td>Urgent work at home</td>
+                                                    <td>
+                                                        <span class="badge badge-blue">Approved</span>
+                                                    </td>
+                                                    <td>
+                                                        <button class="btn btn-default" data-bs-toggle="modal"
+                                                            data-bs-target="#leavesInfo" href="javascript:void(0);">
+                                                            <img src="images/penIcon.svg" />
+                                                        </button>
+
+                                                        <button class="btn btn-default">
+                                                            <img src="images/deleteIcon.svg" />
+                                                        </button>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="flexCheckChecked1">
+                                                        </div>
+                                                    </td>
+                                                    <td>SSPL01</td>
+                                                    <td>01 Jan 2016</td>
+                                                    <td>01 Jan 2016</td>
+                                                    <td>Casual Leave</td>
+                                                    <td>Urgent work at home</td>
+                                                    <td>
+                                                        <span class="badge badge-blue">Approved</span>
+                                                    </td>
+                                                    <td>
+                                                        <button class="btn btn-default" data-bs-toggle="modal"
+                                                            data-bs-target="#leavesInfo" href="javascript:void(0);">
+                                                            <img src="images/penIcon.svg" />
+                                                        </button>
+
+                                                        <button class="btn btn-default">
+                                                            <img src="images/deleteIcon.svg" />
+                                                        </button>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="flexCheckChecked1">
+                                                        </div>
+                                                    </td>
+                                                    <td>SSPL01</td>
+                                                    <td>01 Jan 2016</td>
+                                                    <td>01 Jan 2016</td>
+                                                    <td>Casual Leave</td>
+                                                    <td>Urgent work at home</td>
+                                                    <td>
+                                                        <span class="badge badge-red">Declined</span>
+                                                    </td>
+                                                    <td>
+                                                        <button class="btn btn-default" data-bs-toggle="modal"
+                                                            data-bs-target="#leavesInfo" href="javascript:void(0);">
+                                                            <img src="images/penIcon.svg" />
+                                                        </button>
+
+                                                        <button class="btn btn-default">
+                                                            <img src="images/deleteIcon.svg" />
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div class="commonPagination my-2">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="commonPagination__content justify-content-end">
+                                                <p class="mb-0">Showing <span>1 to 10</span> of <span>16 entries</span>
+                                                </p>
+                                                <div class="paginationButton">
+                                                    <a href="javascript:void(0);">Previous</a>
+                                                    <a href="javascript:void(0);">1</a>
+                                                    <a href="javascript:void(0);">2</a>
+                                                    <a href="javascript:void(0);">Next</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Leave tabs ends -->
+
+                        <!-- Salaryslip tab start -->
+                        <div class="tab-pane fade" id="pills-salary" role="tabpanel" aria-labelledby="pills-salary-tab"
+                            tabindex="0">
+                            <div class="profileCard commonBoxShadow rounded-1 mb-3">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <h3>Salary Slips for the Month of March 2023</h3>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="text-end">
+                                            <div class="btn-group" role="group" aria-label="Basic outlined example">
+                                                <button type="button" class="btn">CSV</button>
+                                                <button type="button" class="btn">PDF</button>
+                                                <button type="button" class="btn">
+                                                    <span><img src="images/printIcon.svg" /></span> Print
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="company">
+                                            <div class="company__logo">
+                                                <img class="mini-logo" src="images/mini-logo-green.svg"
+                                                    alt="mini-logo-green" />
+                                            </div>
+                                            <div class="company__name">
+                                                <h4>Softuvo Solution Pvt. Ltd.</h4>
+                                                <p>D-199, Industrial Area, Phase - 8B, Mohali</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="company justify-content-end">
+                                            <div class="company__name company__name--right">
+                                                <h4>PAYSLIP #49029</h4>
+                                                <p>Salary Month: March, 2023</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="employeeDetail mb-5">
+                                            <h5>Alex John</h5>
+                                            <p><small>Designing Department</small></p>
+                                            <p><b>UI Designer</b></p>
+                                            <p>Employee ID: <b>SSPLO1</b></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="salaryTable">
+                                            <h3>Earnings</h3>
+                                            <table class="table">
+                                                <tr>
+                                                    <td>Basic Salary</td>
+                                                    <td class="text-end">25,200</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>House Rent Allowance (H.R.A.)</td>
+                                                    <td class="text-end">9,408</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>Conveyance</td>
+                                                    <td class="text-end">1,493</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>Other Allowance</td>
+                                                    <td class="text-end">1,167</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>Total Earnings</td>
+                                                    <td class="text-end">37,268</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="salaryTable">
+                                            <h3>Deductions</h3>
+                                            <table class="table">
+                                                <tr>
+                                                    <td>Tax Deducted at Source (T.D.S.)</td>
+                                                    <td class="text-end">0</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>Provident Fund</td>
+                                                    <td class="text-end">1,800</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>ESI</td>
+                                                    <td class="text-end">500</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>Loan</td>
+                                                    <td class="text-end">0</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>Total Deductions</td>
+                                                    <td class="text-end">2,300</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <p class="mt-2"><b>Net Salary: 34968</b> (Thirty four thousand nine hundred and sixty
+                                    eight only.)</p>
+                            </div>
+                        </div>
+                        <!-- Salaryslip tab ends -->
+
+                        <!-- Awards tab starts -->
+                        <div class="tab-pane fade" id="pills-awards" role="tabpanel" aria-labelledby="pills-awards-tab"
+                            tabindex="0">
+                            <div class="row">
+                                <div class="col-lg-5">
+                                    <div class="profileCard commonBoxShadow rounded-1 mb-3">
+                                        <a class="editIcon" href="javascript:void(0);">
+                                            <img src="images/editIcon.svg" />
+                                        </a>
+                                        <h3>Awards & Recognitions</h3>
+
+                                        <ul class="eduList">
+                                            <li>
+                                                <p><b>Employee of the Month</b></p>
+                                                <p class="grey pb-2">May 2023</p>
+                                            </li>
+
+                                            <li>
+                                                <p><b>Employee of the Quarter</b></p>
+                                                <p class="grey pb-2">Dec 2022</p>
+                                            </li>
+
+                                            <li>
+                                                <p><b>General Appreciation of Achievement</b></p>
+                                                <p class="grey pb-2">Oct 2022</p>
+                                            </li>
+
+                                            <li>
+                                                <p><b>Employee of the Month</b></p>
+                                                <p class="grey pb-2">Jan 2022</p>
+                                            </li>
+                                        </ul>
+                                        <!-- <a class="addBtn" href="javascript:void(0);">Add New <img src="images/addIcon.svg" /></a> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Award tab ends -->
+
+                        <!-- Payroll history starts -->
+                        <div class="tab-pane fade" id="pills-history" role="tabpanel"
+                            aria-labelledby="pills-history-tab" tabindex="0">
+                            <div class="row">
+                                <div class="col-lg-5">
+                                    <div class="profileCard commonBoxShadow rounded-1 mb-3">
+                                        <a class="editIcon" href="javascript:void(0);">
+                                            <img src="images/editIcon.svg">
+                                        </a>
+                                        <h3>Payroll History</h3>
+
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6">
+                                                <p>Annual CTC:</p>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6">
+                                                <p><strong>8,70,000</strong></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6">
+                                                <p>Basic Salary:</p>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6">
+                                                <p class="green"><strong>----</strong></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6">
+                                                <p>Allowances:</p>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6">
+                                                <p><strong>1500</strong></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6">
+                                                <p>Deductions:</p>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6">
+                                                <p><strong>2500</strong></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Payroll history ends -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="preloader"></div>
+
+
+
+    <!-- personal info modal starts -->
+    <div class="modal fade personalInfo" id="personalInfo" data-bs-backdrop="static" data-bs-keyboard="false"
+        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1> -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h3 class="text-center">Profile Information</h3>
+
+                    <div class="userProfileSection">
+                        <img src="images/userImg.png" />
+                        <span>
+                            edit
+                            <input title="Upload Image" type="file" />
+                        </span>
+                    </div>
+
+                    <h3 class="text-center green mt-4">SSPl01</h3>
+                    <form action="" class="px-3 commonForm">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="name">First Name<sup>*</sup></label>
+                                    <input name="name" type="text" class="form-control" placeholder="First Name" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Last Name</label>
+                                    <input type="text" class="form-control" placeholder="Last Name" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="email">Email<sup>*</sup></label>
+                                    <input name="email" type="email" class="form-control" placeholder="Enter Email" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Change Password</label>
+                                    <input type="password" class="form-control" placeholder="Enter Password" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Birth Date</label>
+                                    <input type="text" class="form-control datePicker" placeholder="Birth Date" />
+                                    <span class="form-control-icon">
+                                        <img src="images/calenderIcon.svg" />
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="date">Joining Date<sup>*</sup></label>
+                                    <input name="date" type="text" class="form-control datePicker"
+                                        placeholder="Joining Date" />
+                                    <span class="form-control-icon">
+                                        <img src="images/calenderIcon.svg" />
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Phone</label>
+                                    <input type="number" class="form-control" placeholder="Enter Phone" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="dapartment">Select Department<sup>*</sup></label>
+                                    <select name="dapartment" id="department" class="form-control">
+                                        <option selected value="">Select Department</option>
+                                        <option value="1">Front End</option>
+                                        <option value="2">DevOps</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="designation">Select Designation<sup>*</sup></label>
+                                    <select name="designation" id="designation" class="form-control" required>
+                                        <option selected value="">Select Designation</option>
+                                        <option value="1">Manager</option>
+                                        <option value="2">Senior</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="d-block">Select Reporting Manager</label>
+                                    <select class="form-control manager">
+                                        <option value='option-1' data-src="images/userImg.png">Reporting Manager
+                                        </option>
+                                        <option value='option-2' data-src="http://placehold.it/45x45">Reporting Manager
+                                        </option>
+                                        <option value='option-3' data-src="http://placehold.it/45x45">Reporting Manager
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Can this user login to the app?</label>
+                                    <input type="text" class="form-control" placeholder="Yes/No" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Can this user receive email noification</label>
+                                    <input type="text" class="form-control" placeholder="Yes/No" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Workplace</label>
+                                    <select class="form-control">
+                                        <option selected>Select Workplace</option>
+                                        <option>WFH</option>
+                                        <option>WFO</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <div class="form-group mt-4">
+                                    <button class="btn commonButton ">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- personal info modal ends -->
+
+    <!-- personal info2 modal starts -->
+    <div class="modal fade personalInfo" id="personalInfo2" data-bs-backdrop="static" data-bs-keyboard="false"
+        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1> -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h3 class="text-center">Profile Information</h3>
+                    <form action="" class="px-3 personalForm">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="gender">Gender</label>
+                                    <select name="gender" id="gender" class="form-control">
+                                        <option value="">Select Gender</option>
+                                        <option value="1">Male</option>
+                                        <option value="2">Female</option>
+                                        <option value="3">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="WhatsApp">Whatsapp</label>
+                                    <input name="WhatsApp" type="number" class="form-control"
+                                        placeholder="Enter Whatsapp" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="email">Personal Email</label>
+                                    <input name="email" class="form-control" placeholder="Enter Personal Email" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="nationality">Nationality</label>
+                                    <input name="nationality" type="text" class="form-control"
+                                        placeholder="Enter Nationality" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Religion</label>
+                                    <input type="text" class="form-control" placeholder="Enter Religion" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="bloodGroup">Blood Group</label>
+                                    <input name="bloodGroup" type="text" class="form-control"
+                                        placeholder="Enter Blood Group" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="martialStatus">Martial Status</label>
+                                    <input name="martialStatus" type="text" class="form-control"
+                                        placeholder="Enter Status" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Employment of Spouse</label>
+                                    <select class="form-control" required>
+                                        <option selected>Select</option>
+                                        <option>Select</option>
+                                        <option>Select</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>No. of Children</label>
+                                    <select class="form-control" required>
+                                        <option selected>Select</option>
+                                        <option>0</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Passport No.</label>
+                                    <input type="text" class="form-control" placeholder="Enter Passport No." />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Passport Expiry Date</label>
+                                    <input type="text" class="form-control datePicker" placeholder="Enter Date" />
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <h3 class="my-4">Current Address</h3>
+
+                        <div class="row">
+
+                            <div class="col-lg-6">
+                                <div class="form-group mt-0">
+                                    <label for="city">City</label>
+                                    <input name="city" type="text" class="form-control" placeholder="Enter City" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group mt-0">
+                                    <label for="state">State</label>
+                                    <input name="state" type="text" class="form-control" placeholder="Enter State" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Country</label>
+                                    <select id="country" class="form-control country">
+                                        <option value="">Select Country</option>
+                                        <option value="option 1">India</option>
+                                        <option value="option 2">India</option>
+                                        <option value="option 3">India</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Zipcode</label>
+                                    <input type="number" class="form-control" placeholder="Enter Zipcode" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <label for="address">Address</label>
+                                    <input name="address" type="text" class="form-control"
+                                        placeholder="Enter Address" />
+                                </div>
+                                <div class="form-check mt-3">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Same as Present
+                                    </label>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <h3 class="my-4">Permanent Address</h3>
+
+                        <div class="row">
+
+                            <div class="col-lg-6">
+                                <div class="form-group mt-0">
+                                    <label>City</label>
+                                    <input type="text" class="form-control" placeholder="Enter City" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group mt-0">
+                                    <label>State</label>
+                                    <input type="text" class="form-control" placeholder="Enter State" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Country</label>
+                                    <select class="form-control country">
+                                        <option value='option-1'>India</option>
+                                        <option value='option-2'>India</option>
+                                        <option value='option-3'>India</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Zipcode</label>
+                                    <input type="number" class="form-control" placeholder="Enter Zipcode" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <label>Address</label>
+                                    <input type="text" class="form-control" placeholder="Enter Address" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <div class="form-group mt-4">
+                                    <button class="btn commonButton ">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- personal info2 modal ends -->
+
+
+    <!-- contact information modal starts -->
+    <div class="modal fade personalInfo" id="contactInfo" data-bs-backdrop="static" data-bs-keyboard="false"
+        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1> -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h3 class="text-center">Emergency Contact Information</h3>
+                    <form action="" class="px-3 emergencyForm">
+                        <h3 class="my-4 fs-5">Primary Contact</h3>
+
+                        <div class="row">
+
+                            <div class="col-lg-6">
+                                <div class="form-group mt-0">
+                                    <label for="name">Name <sup>*</sup></label>
+                                    <input name="name" type="text" class="form-control" placeholder="Enter Name" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group mt-0">
+                                    <label for="relationship">Relationship <sup>*</sup></label>
+                                    <input name="relationship" type="text" class="form-control"
+                                        placeholder="Enter Relationship" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="phone">Phone No. <sup>*</sup></label>
+                                    <input name="phone" type="number" class="form-control"
+                                        placeholder="Enter Phone No." />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Phone No.2</label>
+                                    <input type="number" class="form-control" placeholder="Enter Phone No." />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <label for="email">Email <sup>*</sup></label>
+                                    <input name="email" type="email" class="form-control" placeholder="Enter email" />
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <h3 class="my-4 fs-5">Secondary Contact</h3>
+
+                        <div class="row">
+
+                            <div class="col-lg-6">
+                                <div class="form-group mt-0">
+                                    <label for="name">Name <sup>*</sup></label>
+                                    <input name="name" type="text" class="form-control" placeholder="Enter Name" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group mt-0">
+                                    <label for="relationship">Relationship <sup>*</sup></label>
+                                    <input name="relationship" type="text" class="form-control"
+                                        placeholder="Enter Relationship" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="phone">Phone No. <sup>*</sup></label>
+                                    <input name="phone" type="number" class="form-control"
+                                        placeholder="Enter Phone No." />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Phone No.2 <sup>*</sup></label>
+                                    <input type="number" class="form-control" placeholder="Enter Phone No." />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <label for="email">Email <sup>*</sup></label>
+                                    <input name="email" type="email" class="form-control" placeholder="Enter email" />
+                                </div>
+                            </div>
+
+                            <a class="addBtn mt-3" href="javascript:void(0);">Add New <img
+                                    src="images/addIcon.svg" /></a>
+
+                            <div class="col-lg-12">
+                                <div class="form-group mt-4">
+                                    <button class="btn commonButton ">Submit</button>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- contact information modal ends -->
+
+
+    <!-- joining detail modal starts -->
+    <div class="modal fade personalInfo" id="joiningDetail" data-bs-backdrop="static" data-bs-keyboard="false"
+        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1> -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h3 class="text-center">Joining Details</h3>
+                    <form action="" class="px-3 joinForm">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group mt-0">
+                                    <label for="date">Confirmation Date</label>
+                                    <input name="date" type="text" class="form-control datePicker"
+                                        placeholder="Enter Confirmation Date" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group mt-0">
+                                    <label for="noticePeriod">Notice Period</label>
+                                    <input name="noticePeriod" type="text" class="form-control"
+                                        placeholder="Enter Notice Period" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="probationPeriod">Probation Period</label>
+                                    <input name="probationPeriod" type="text" class="form-control"
+                                        placeholder="Enter Probation Period" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Other Terms</label>
+                                    <textarea class="form-control" placeholder="Enter Terms"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <div class="form-group mt-4">
+                                    <button class="btn commonButton ">Submit</button>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- joining detail modal ends -->
+
+    <!-- official contact modal starts -->
+    <div class="modal fade personalInfo" id="officialContact" data-bs-backdrop="static" data-bs-keyboard="false"
+        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1> -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h3 class="text-center">Official Contact Information</h3>
+                    <form action="" class="px-3 officialContact">
+
+                        <div class="row">
+
+                            <div class="col-lg-6">
+                                <div class="form-group mt-0">
+                                    <label for="redmine">Redmine Username</label>
+                                    <input name="redmine" type="text" class="form-control"
+                                        placeholder="Enter Redmine Username" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group mt-0">
+                                    <label for="discord">Discord Username</label>
+                                    <input name="discord" type="text" class="form-control"
+                                        placeholder="Enter Discord Username" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="skype">Skype ID</label>
+                                    <input name="skype" type="text" class="form-control" placeholder="Enter Skype ID" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <div class="form-group mt-4">
+                                    <button class="btn commonButton ">Submit</button>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- official contact modal ends -->
+
+    <!-- family info modal starts -->
+    <div class="modal fade personalInfo" id="familyInfo" data-bs-backdrop="static" data-bs-keyboard="false"
+        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1> -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h3 class="text-center">Family Information</h3>
+                    <form action="" class="px-3 familyForm">
+
+                        <h3 class="mt-4 mb-2 fs-5 d-flex justify-content-between align-items-center">Family Member <a
+                                href="javascript:void(0);"><span><img src="images/binIcon.svg" /></span></a></h3>
+
+                        <div class="row">
+
+                            <div class="col-lg-6">
+                                <div class="form-group mt-0">
+                                    <label for="name">Name</label>
+                                    <input name="name" type="text" class="form-control" placeholder="Enter Name" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group mt-0">
+                                    <label for="relation">Relationship</label>
+                                    <input name="relation" type="text" class="form-control"
+                                        placeholder="Enter Relationship" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Date of Birth</label>
+                                    <input type="text" class="form-control datePicker"
+                                        placeholder="Enter Date of Birth" />
+                                    <span class="form-control-icon">
+                                        <img src="images/calenderIcon.svg">
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="phone">Phone</label>
+                                    <input name="phone" type="number" class="form-control" placeholder="Enter Phone" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <label for="address">Address</label>
+                                    <input name="address" type="text" class="form-control"
+                                        placeholder="Enter Address" />
+                                </div>
+
+                                <a class="addBtn mt-3" href="javascript:void(0);">Add New <img
+                                        src="images/addIcon.svg"></a>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <div class="form-group mt-4">
+                                    <button class="btn commonButton ">Submit</button>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- family info modal ends -->
+
+    <!-- education modal modal starts -->
+    <div class="modal fade personalInfo" id="eduInfo" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1> -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h3 class="text-center">Education Information</h3>
+                    <form action="" class="px-3 educationForm">
+
+
+                        <div class="shadow p-3 rounded">
+                            <h3 class="mb-2 fs-5 d-flex justify-content-between align-items-center">Education
+                                Information <a href="javascript:void(0);"><span><img
+                                            src="images/binIcon.svg" /></span></a></h3>
+                            <div class="row">
+
+                                <div class="col-lg-6">
+                                    <div class="form-group mt-0">
+                                        <label for="institute">Institute <span class="text-red">*</span></label>
+                                        <input name="institute" type="text" class="form-control"
+                                            placeholder="Enter Institute Name" />
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="form-group mt-0">
+                                        <label for="startDate">Starting Date</label>
+                                        <input name="startDate" type="text" class="form-control datePicker"
+                                            placeholder="Enter Starting Date" />
+                                        <span class="form-control-icon">
+                                            <img src="images/calenderIcon.svg">
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label for="completeDate">Complete Date</label>
+                                        <input name="completeDate" type="text" class="form-control datePicker"
+                                            placeholder="Enter Complete Date" />
+                                        <span class="form-control-icon">
+                                            <img src="images/calenderIcon.svg">
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label for="degree">Select Degree</label>
+                                        <select name="degree" id="degree" type="text" class="form-control">
+                                            <option></option>
+                                            <option>Bsc Computer Science</option>
+                                            <option>Graduation</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label>Grade</label>
+                                        <input type="text" class="form-control" placeholder="Enter Grade" />
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label>Document</label>
+                                        <div class="fileUploader">
+                                            <img src="images/uploadIcon.svg" />
+                                            <span>Drag and Drop File</span>
+                                            <input type="file" title="Upload Document" />
+                                        </div>
+                                        <p class="uploadFilename"><img src="images/pdfIcon.svg" /> Institute Degree.pdf
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- <div class="shadow p-3 rounded mt-3">
+                        <h3 class="mb-2 fs-5 d-flex justify-content-between align-items-center">Education Information <a href="javascript:void(0);"><span><img src="images/binIcon.svg" /></span></a></h3>
+                        <div class="row">
+
+                            <div class="col-lg-6">
+                                <div class="form-group mt-0">
+                                    <label>Institute</label>
+                                    <input type="text" class="form-control" placeholder="Enter Institute Name" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group mt-0">
+                                    <label>Starting Date</label>
+                                    <input type="text" class="form-control datePicker" placeholder="Enter Starting Date" />
+                                    <span class="form-control-icon">
+                                        <img src="images/calenderIcon.svg">
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Complete Date</label>
+                                    <input type="text" class="form-control datePicker" placeholder="Enter Complete Date" />
+                                    <span class="form-control-icon">
+                                        <img src="images/calenderIcon.svg">
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Select Degree</label>
+                                    <select type="text" class="form-control">
+                                        <option></option>
+                                        <option>Bsc Computer Science</option>
+                                        <option>Graduation</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Grade</label>
+                                    <input type="text" class="form-control" placeholder="Enter Grade" />
+                                </div>
+                            </div>   
+                            
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Document</label>
+                                    <div class="fileUploader">
+                                        <img src="images/uploadIcon.svg" />
+                                        <span>Drag and Drop File</span>
+                                        <input type="file" title="Upload Document" />
+                                    </div>
+                                    <p class="uploadFilename"><img src="images/pdfIcon.svg" /> Institute Degree.pdf</p>
+                                </div>
+                            </div> 
+
+                        </div>
+                    </div> -->
+
+                        <a class="addBtn mt-3" href="javascript:void(0);">Add New <img src="images/addIcon.svg"></a>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="form-group mt-4">
+                                    <button class="btn commonButton ">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- education modal ends -->
+
+    <!-- bank info modal starts -->
+    <div class="modal fade personalInfo" id="bankInfo" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1> -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h3 class="text-center">Bank Information</h3>
+                    <form action="" class="px-3 bankForm">
+                        <div class="row">
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="name">Name as per Bank Records</label>
+                                    <input name="name" type="text" class="form-control" placeholder="Enter Name" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="bankName">Bank Name</label>
+                                    <input name="bankName" type="text" class="form-control"
+                                        placeholder="Enter Bank Name" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="account">Bank Account No.</label>
+                                    <input name="account" type="number" class="form-control"
+                                        placeholder="Enter Account No." />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="ifsc">IFSC Code</label>
+                                    <input name="ifsc" type="text" class="form-control" placeholder="Enter IFSC Code" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="pan">PAN No.</label>
+                                    <input name="pan" type="text" class="form-control" placeholder="Enter PAN No." />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <div class="form-group mt-4">
+                                    <button class="btn commonButton ">Submit</button>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- bank info modal ends -->
+
+    <!-- statutory modal starts -->
+    <div class="modal fade personalInfo" id="statutoryInfo" data-bs-backdrop="static" data-bs-keyboard="false"
+        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1> -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h3 class="text-center">Bank & Statutory Information</h3>
+                    <form action="" class="px-3">
+                        <h3 class="fs-5 mb-0">ESI Account</h3>
+
+                        <div class="form-check mt-3">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Employee is covered under ESI
+                            </label>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>ESI Number</label>
+                                    <input type="number" class="form-control" placeholder="Enter ESI Name" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Branch Office</label>
+                                    <input type="text" class="form-control" placeholder="Enter Branch Office" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Dispensary</label>
+                                    <select class="form-control">
+                                        <option></option>
+                                        <option>Dispensary Name</option>
+                                        <option>Dispensary Name</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <div class="form-check mt-3">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1">
+                                    <label class="form-check-label" for="flexCheckDefault1">
+                                        In case of any previous employment please fill up the details as under.
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <div class="form-check mt-3">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2">
+                                    <label class="form-check-label" for="flexCheckDefault2">
+                                        Details of Nominee u/s 71 of ESI Act 1948/Rule-56(2) of ESI (Central) Rules,
+                                        1950 for payment of cash benefit in the event of death
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <div class="form-check mt-3">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault3">
+                                    <label class="form-check-label" for="flexCheckDefault3">
+                                        Family Particulars of Insured person
+                                    </label>
+                                    <p class="">Whether residing with him/her</p>
+                                    <div class="d-flex">
+                                        <div class="form-check me-2">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault1">
+                                            <label class="form-check-label" for="flexRadioDefault1">
+                                                Yes
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault1">
+                                            <label class="form-check-label" for="flexRadioDefault1">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="form-check mt-3">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Employee is covered under PF
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>UAN</label>
+                                    <input type="number" class="form-control" placeholder="Enter UAN" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>PF Number</label>
+                                    <input type="number" class="form-control" placeholder="Enter PF Number" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>PF Join Date</label>
+                                    <input type="text" class="form-control datePicker" placeholder="Enter Join Date" />
+                                    <span class="form-control-icon">
+                                        <img src="images/calenderIcon.svg">
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Whether earlier a member of Employees provident Fund Scheme 1952?</label>
+                                    <div class="d-flex">
+                                        <div class="form-check me-2">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault2">
+                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                Yes
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault3">
+                                            <label class="form-check-label" for="flexRadioDefault3">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Whether earlier a member of Employees ‘Pension Scheme ,1995?</label>
+                                    <div class="d-flex">
+                                        <div class="form-check me-2">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault1"
+                                                id="flexRadioDefault4">
+                                            <label class="form-check-label" for="flexRadioDefault4">
+                                                Yes
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault1"
+                                                id="flexRadioDefault5">
+                                            <label class="form-check-label" for="flexRadioDefault5">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-lg-12">
+                                <div class="form-group mt-4">
+                                    <button class="btn commonButton ">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- statutory Information modal ends -->
+
+    <!-- additional info modal starts -->
+    <div class="modal fade personalInfo" id="additionalInfo" data-bs-backdrop="static" data-bs-keyboard="false"
+        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1> -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h3 class="text-center">Additional Information</h3>
+                    <form action="" class="px-3">
+                        <div class="row">
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Allergies</label>
+                                    <select class="form-control">
+                                        <option></option>
+                                        <option>Yes</option>
+                                        <option>No</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Smoke</label>
+                                    <select class="form-control">
+                                        <option></option>
+                                        <option>Yes</option>
+                                        <option>No</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Drink</label>
+                                    <select class="form-control">
+                                        <option></option>
+                                        <option>Yes</option>
+                                        <option>No</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Diet</label>
+                                    <select class="form-control">
+                                        <option></option>
+                                        <option>Veg</option>
+                                        <option>Non-Veg</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Hobbies</label>
+                                    <input type="text" class="form-control" placeholder="Enter Hobbies" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <div class="form-group mt-4">
+                                    <button class="btn commonButton ">Submit</button>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- additional info modal ends -->
+
+    <!-- additional info modal starts -->
+    <div class="modal fade personalInfo" id="payrollInfo" data-bs-backdrop="static" data-bs-keyboard="false"
+        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1> -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h3 class="text-center">Payroll</h3>
+                    <form action="" class="px-3">
+                        <div class="row">
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Annual CTC</label>
+                                    <input type="number" class="form-control" placeholder="Enter CTC" />
+                                </div>
+                            </div>
+
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Basic Salary</label>
+                                    <input type="number" class="form-control" placeholder="Enter Basic Salary" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Allowances</label>
+                                    <input type="number" class="form-control" placeholder="Enter Allowances" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Deductions</label>
+                                    <input type="number" class="form-control" placeholder="Enter Deductions" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <div class="form-group mt-4">
+                                    <button class="btn commonButton ">Submit</button>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- additional info modal ends -->
+
+    <!-- document modal starts -->
+    <div class="modal fade personalInfo" id="documentInfo" data-bs-backdrop="static" data-bs-keyboard="false"
+        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1> -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h3 class="text-center">Documents</h3>
+                    <form action="" class="px-3">
+                        <div class="row">
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Document Name</label>
+                                    <input type="text" class="form-control" placeholder="Enter Document Name" />
+                                </div>
+                            </div>
+
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Document Type</label>
+                                    <select type="text" class="form-control">
+                                        <option></option>
+                                        <option>PDF</option>
+                                        <option>DOC</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Document</label>
+                                    <div class="fileUploader">
+                                        <img src="images/uploadIcon.svg">
+                                        <span>Drag and Drop File</span>
+                                        <input type="file" title="Upload Document">
+                                    </div>
+                                    <p class="uploadFilename"><img src="images/pdfIcon.svg"> Institute Degree.pdf</p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <div class="form-group mt-4">
+                                    <button class="btn commonButton ">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- document modal ends -->
+
+    <!-- leaves modal starts -->
+    <div class="modal fade personalInfo" id="leavesInfo" data-bs-backdrop="static" data-bs-keyboard="false"
+        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1> -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h3 class="text-center">Leaves</h3>
+                    <form action="" class="px-3">
+                        <div class="row">
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Leave Type</label>
+                                    <select class="form-control">
+                                        <option></option>
+                                        <option>Casual Leave</option>
+                                        <option>Sick Leave</option>
+                                        <option>Earned Leave</option>
+                                        <option>Loss Of Pay</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>From</label>
+                                    <input type="text" class="form-control datePicker" placeholder="From" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>To</label>
+                                    <input type="text" class="form-control datePicker" placeholder="To" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="d-block">Reporting Manager</label>
+                                    <select class="form-control manager">
+                                        <option value='option-1' data-src="images/userImg.png">Reporting Manager
+                                        </option>
+                                        <option value='option-2' data-src="http://placehold.it/45x45">Reporting Manager
+                                        </option>
+                                        <option value='option-3' data-src="http://placehold.it/45x45">Reporting Manager
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Status</label>
+                                    <select class="form-control">
+                                        <option></option>
+                                        <option>Approved</option>
+                                        <option>Rejected</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <label class="d-block">Reason</label>
+                                    <textarea class="form-control" placeholder="Enter Reason"></textarea>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-lg-12">
+                                <div class="form-group mt-4">
+                                    <button class="btn commonButton ">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- leaves modal ends -->
+
+
+
+
+    <!-- JavaScript Libraries -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.slimscroll.min.js"></script>
+    <!-- <script src="js/jquery-ui.min.js"></script> -->
+    <script src="js/select2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>

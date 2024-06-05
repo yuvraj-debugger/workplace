@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <!-- Favicon -->
+    <link rel="icon" href="images/mini-logo-green.svg" sizes="any" type="image/svg+xml">
+    <title>Worksuit Tool - Leaves</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <main class="main-wrapper">
+
+        <header class="header">
+            <div class="header-left">
+                <div class="miniLogo">
+                    <a href="index.html">
+                        <img src="images/mini-logo.svg" alt="mini-logo" />
+                    </a>
+                </div>
+            </div>
+            <div class="header-center">
+                <h1>Softuvo Solutions</h1>
+            </div>
+            <a id="toggle_btn" href="javascript:void(0);">
+                <span class="bar-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </a>
+            <ul class="header-new-menu">
+                <li>
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">Clients</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="javascript:void(0);">Clients</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">Projects</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="javascript:void(0);">Projects</a>
+                        <a class="dropdown-item" href="javascript:void(0);">Tasks</a>
+                        <a class="dropdown-item" href="javascript:void(0);">Task Board</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">Leads</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="javascript:void(0);">Leads</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">Tickets</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="javascript:void(0);">Tickets</a>
+                    </div>
+                </li>
+            </ul>
+            <a id="mobile_btn" class="mobile_btn" href="#sidebar"><i class="fa-solid fa-bars"></i></a>
+            <div class="user-menu">
+                <div class="searchbar">
+                    <input class="searchbar__field" type="search" placeholder="Search here">
+                    <button class="searchbar__button" type="button"><i
+                            class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div class="headerIcons">
+                    <ul>
+                        <li class="headerIcons__icon"><button type="button"><img src="images/header/check-icon.svg"
+                                    alt=""> <span class="counter">2</span></button></li>
+                        <li class="headerIcons__icon"><button type="button"><img src="images/header/time-icon.svg"
+                                    alt=""> <span class="counter">5</span></button></li>
+                        <li class="headerIcons__icon"><button type="button"><img src="images/header/add-icon.svg"
+                                    alt=""> <span class="counter">2</span></button></li>
+                        <li class="headerIcons__icon"><button type="button"><img src="images/header/bell-icon.svg"
+                                    alt=""> <span class="counter">12</span></button></li>
+                    </ul>
+                </div>
+                <div class="avatar">
+                    <div class="dropdown">
+                        <button class="avatar__button dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <img class="avatar__image" src="images/user-img.jpg" alt="user-img" />
+                            <span>Franklin Jr.</span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a href="javascript:void(0);">My Profile</a></li>
+                            <li><a href="javascript:void(0);">Setting</a></li>
+                            <li><a href="javascript:void(0);">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header><!--Header End-->
+
+        <div class="sidebar" id="sidebar">
+            <div class="slimScrollDiv">
+                <div class="sidebar-left slimscroll">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a href="javascript:void(0);" class="nav-link active" id="home-tab" data-bs-toggle="tab"
+                                data-bs-target="#home" type="button" role="tab" aria-controls="home"
+                                aria-selected="true"><span data-bs-delay='{"show":"1000", "hide":"0"}'
+                                    data-bs-offset="0,10" data-bs-toggle="tooltip" data-bs-placement="right"
+                                    data-bs-title="Home"><img src="images/navbar/home-icon.svg" alt="" /></span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:void(0);" class="nav-link" id="app-tab" data-bs-toggle="tab"
+                                data-bs-target="#app" type="button" role="tab" aria-controls="app"
+                                aria-selected="false"><span data-bs-delay='{"show":"1000", "hide":"0"}'
+                                    data-bs-offset="0,10" data-bs-toggle="tooltip" data-bs-placement="right"
+                                    data-bs-title="App"><img src="images/navbar/app-icon.svg" alt="" /></span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:void(0);" class="nav-link" id="employees-tab" data-bs-toggle="tab"
+                                data-bs-target="#employees" type="button" role="tab" aria-controls="employees"
+                                aria-selected="false"><span data-bs-delay='{"show":"1000", "hide":"0"}'
+                                    data-bs-offset="0,10" data-bs-toggle="tooltip" data-bs-placement="right"
+                                    data-bs-title="Employees"><img src="images/navbar/employees-icon.svg"
+                                        alt="" /></span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:void(0);" class="nav-link" id="clients-tab" data-bs-toggle="tab"
+                                data-bs-target="#clients" type="button" role="tab" aria-controls="clients"
+                                aria-selected="false"><span data-bs-delay='{"show":"1000", "hide":"0"}'
+                                    data-bs-offset="0,10" data-bs-toggle="tooltip" data-bs-placement="right"
+                                    data-bs-title="Clients"><img src="images/navbar/clients-icon.svg"
+                                        alt="" /></span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sidebar-right">
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <p>Leave</p>
+                        <ul>
+                            <li><a href="holidays.html">Holidays</a></li>
+                            <li><a href="leave-admin.html">Leaves (Admin)</a></li>
+                            <li><a href="leave-employee.html">Leave (Employees)</a></li>
+                            <li><a class="active" href="leave-settings.html">Leave Settings</a></li>
+                            <li><a href="javascript:void(0);">Pending</a></li>
+                            <li><a href="javascript:void(0);">Team on Leave</a></li>
+                            <li><a href="javascript:void(0);">Apply Leave</a></li>
+                            <li><a href="javascript:void(0);">History</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="app" role="tabpanel" aria-labelledby="app-tab">
+                        <p>App</p>
+                        <ul>
+                            <li><a href="javascript:void(0);">Admin Dashboard</a></li>
+                            <li><a href="javascript:void(0);">Employee Dashboard</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="employees" role="tabpanel" aria-labelledby="employees-tab">
+                        <p>Employees</p>
+                        <ul>
+                            <li><a href="javascript:void(0);">Admin Dashboard</a></li>
+                            <li><a href="javascript:void(0);">Employee Dashboard</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="clients" role="tabpanel" aria-labelledby="clients-tab">
+                        <p>Clients</p>
+                        <ul>
+                            <li><a href="javascript:void(0);">Admin Dashboard</a></li>
+                            <li><a href="javascript:void(0);">Employee Dashboard</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div><!--Sidebar End-->
+
+        <div class="page-wrapper">
+            <div class="content container-fluid">
+                <div class="page-head-box">
+                    <h3>Leave Settings</h3>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="index.html">Dashboard</a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">Leave Settings</li>
+                        </ol>
+                    </nav>
+                </div>
+
+                <div class="dashboardSection">
+                    <div class="setting">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="dashboardSection__body mb-3 leaveList">
+                                    <ul>
+                                        <li>
+                                            <a href="#leaveType">Leave Year</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#casualLeave">Casual Leave</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#sickLeave">Sick Leave</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#earnedLeave">Earned Leave/ Privilege Leave</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#maternityLeave">Maternity Leave</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#paternityLeave">Paternity Leave</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#compensatoryOff">Compensatory Off</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="dashboardSection__body" id="leaveType">
+                                    <div class="row">
+                                        <div class="col-lg-5">
+                                            <h4>Leave Year</h4>
+
+                                            <div class="form-group">
+                                                <label>From<sup>*</sup></label>
+                                                <div class="d-flex align-items-center">
+                                                    <input type="text" class="form-control" />
+                                                    <span class="ms-2"><img src="images/editIconGreen.svg" /></span>
+                                                </div>
+                                            </div>
+
+                                            <h4 class="fs-6 mt-4">Carry Forward *</h4>
+                                            <div class="d-flex mt-2">
+                                                <div class="form-check me-3">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadioDefault">
+                                                    <label class="form-check-label" for="flexRadioDefault">
+                                                        Yes
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadioDefault1" checked>
+                                                    <label class="form-check-label" for="flexRadioDefault1">
+                                                        No
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <div class="d-flex align-items-center">
+                                                    <input type="text" class="form-control" />
+                                                    <span class="ms-2"><img src="images/editIconGreen.svg" /></span>
+                                                </div>
+                                            </div>
+
+                                            <h4 class="fs-6 mt-4">Earned leave *</h4>
+                                            <div class="d-flex mt-2">
+                                                <div class="form-check me-3">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="flexRadioDefault1" id="flexRadioDefault2">
+                                                    <label class="form-check-label" for="flexRadioDefault2">
+                                                        Yes
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="flexRadioDefault1" id="flexRadioDefault3" checked>
+                                                    <label class="form-check-label" for="flexRadioDefault3">
+                                                        No
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-lg-7">
+                                            <h4 class="d-flex justify-content-between align-items-center">Custom Policy
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox" role="switch"
+                                                        id="flexSwitchCheckDefault">
+                                                </div>
+                                            </h4>
+
+                                            <div class="commonDataTable">
+                                                <div class="table-responsive mt-3">
+                                                    <table class="table border rounded">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Policy Name</th>
+                                                                <th>Days</th>
+                                                                <th>Assignee</th>
+                                                                <th></th>
+                                                            </tr>
+                                                        </thead>
+
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>5 Year Service</td>
+                                                                <td>5</td>
+                                                                <td>
+                                                                    <div class="user-name">
+                                                                        <div class="user-image">
+                                                                            <img src="images/user-img.jpg"
+                                                                                alt="user-img">
+                                                                        </div>
+                                                                        <span class="green">Alex</span>
+                                                                    </div>
+                                                                </td>
+
+                                                                <td>
+                                                                    <div class="actionIcons">
+                                                                        <ul>
+                                                                            <li><a class="edit"
+                                                                                    href="javascript:void(0);"><i
+                                                                                        class="fa-solid fa-pen"></i></a>
+                                                                            </li>
+                                                                            <li><button class="bin" type="button"><i
+                                                                                        class="fa-regular fa-trash-can"></i></button>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </td>
+
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>5 Year Service</td>
+                                                                <td>5</td>
+                                                                <td>
+                                                                    <div class="user-name">
+                                                                        <div class="user-image">
+                                                                            <img src="images/user-img.jpg"
+                                                                                alt="user-img">
+                                                                        </div>
+                                                                        <span class="green">Alex</span>
+                                                                    </div>
+                                                                </td>
+
+                                                                <td>
+                                                                    <div class="actionIcons">
+                                                                        <ul>
+                                                                            <li><a class="edit"
+                                                                                    href="javascript:void(0);"><i
+                                                                                        class="fa-solid fa-pen"></i></a>
+                                                                            </li>
+                                                                            <li><button class="bin" type="button"><i
+                                                                                        class="fa-regular fa-trash-can"></i></button>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </td>
+
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>5 Year Service</td>
+                                                                <td>5</td>
+                                                                <td>
+                                                                    <div class="user-name">
+                                                                        <div class="user-image">
+                                                                            <img src="images/user-img.jpg"
+                                                                                alt="user-img">
+                                                                        </div>
+                                                                        <span class="green">Alex</span>
+                                                                    </div>
+                                                                </td>
+
+                                                                <td>
+                                                                    <div class="actionIcons">
+                                                                        <ul>
+                                                                            <li><a class="edit"
+                                                                                    href="javascript:void(0);"><i
+                                                                                        class="fa-solid fa-pen"></i></a>
+                                                                            </li>
+                                                                            <li><button class="bin" type="button"><i
+                                                                                        class="fa-regular fa-trash-can"></i></button>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </td>
+
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>5 Year Service</td>
+                                                                <td>5</td>
+                                                                <td>
+                                                                    <div class="user-name">
+                                                                        <div class="user-image">
+                                                                            <img src="images/user-img.jpg"
+                                                                                alt="user-img">
+                                                                        </div>
+                                                                        <span class="green">Alex</span>
+                                                                    </div>
+                                                                </td>
+
+                                                                <td>
+                                                                    <div class="actionIcons">
+                                                                        <ul>
+                                                                            <li><a class="edit"
+                                                                                    href="javascript:void(0);"><i
+                                                                                        class="fa-solid fa-pen"></i></a>
+                                                                            </li>
+                                                                            <li><button class="bin" type="button"><i
+                                                                                        class="fa-regular fa-trash-can"></i></button>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </td>
+
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="dashboardSection__body mt-3" id="casualLeave">
+                                    <h4 class="d-flex justify-content-between align-items-center">Casual Leave
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch"
+                                                id="flexSwitchCheckDefault1">
+                                        </div>
+                                    </h4>
+
+                                    <div class="row">
+                                        <div class="col-lg-5">
+                                            <div class="form-group">
+                                                <label>Days</label>
+                                                <div class="d-flex align-items-center">
+                                                    <input type="text" class="form-control" />
+                                                    <span class="ms-2" data-bs-toggle="modal"
+                                                        data-bs-target="#leaveModal"><img
+                                                            src="images/editIconGreen.svg" /></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="dashboardSection__body mt-3" id="sickLeave">
+                                    <h4 class="d-flex justify-content-between align-items-center">Sick Leave
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch"
+                                                id="flexSwitchCheckDefault1">
+                                        </div>
+                                    </h4>
+
+                                    <div class="row">
+                                        <div class="col-lg-5">
+                                            <div class="form-group">
+                                                <label>Days</label>
+                                                <div class="d-flex align-items-center">
+                                                    <input type="text" class="form-control" />
+                                                    <span class="ms-2"><img src="images/editIconGreen.svg" /></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="dashboardSection__body mt-3" id="earnedLeave">
+                                    <h4 class="d-flex justify-content-between align-items-center">Earned Leave/
+                                        Privilege Leave
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch"
+                                                id="flexSwitchCheckDefault1">
+                                        </div>
+                                    </h4>
+
+                                    <div class="row">
+                                        <div class="col-lg-5">
+                                            <div class="form-group">
+                                                <label>Days</label>
+                                                <div class="d-flex align-items-center">
+                                                    <input type="text" class="form-control" />
+                                                    <span class="ms-2"><img src="images/editIconGreen.svg" /></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="dashboardSection__body mt-3" id="maternityLeave">
+                                    <h4 class="d-flex justify-content-between align-items-center">Maternity Leave
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch"
+                                                id="flexSwitchCheckDefault1">
+                                        </div>
+                                    </h4>
+
+                                    <div class="row">
+                                        <div class="col-lg-5">
+                                            <div class="form-group">
+                                                <label>Days</label>
+                                                <div class="d-flex align-items-center">
+                                                    <input type="text" class="form-control" />
+                                                    <span class="ms-2"><img src="images/editIconGreen.svg" /></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="dashboardSection__body mt-3" id="paternityLeave">
+                                    <h4 class="d-flex justify-content-between align-items-center">Paternity Leave
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch"
+                                                id="flexSwitchCheckDefault1">
+                                        </div>
+                                    </h4>
+
+                                    <div class="row">
+                                        <div class="col-lg-5">
+                                            <div class="form-group">
+                                                <label>Days</label>
+                                                <div class="d-flex align-items-center">
+                                                    <input type="text" class="form-control" />
+                                                    <span class="ms-2"><img src="images/editIconGreen.svg" /></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="dashboardSection__body mt-3" id="compensatoryOff">
+                                    <h4 class="d-flex justify-content-between align-items-center">Compensatory Off
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch"
+                                                id="flexSwitchCheckDefault1">
+                                        </div>
+                                    </h4>
+
+                                    <div class="row">
+                                        <div class="col-lg-5">
+                                            <div class="form-group">
+                                                <label>Days</label>
+                                                <div class="d-flex align-items-center">
+                                                    <input type="text" class="form-control" />
+                                                    <span class="ms-2"><img src="images/editIconGreen.svg" /></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </main>
+
+
+    <!-- holiday modal starts -->
+    <div class="modal fade personalInfo" id="leaveModal" data-bs-backdrop="static" data-bs-keyboard="false"
+        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1> -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h3 class="text-center">Edit Leave</h3>
+                    <form action="" class="px-3">
+
+                        <div class="row">>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label>Leave Type</label>
+                                <select class="form-control">
+                                    <option>Casual Leave</option>
+                                    <option>Sick Leave</option>
+                                    <option>Earned Leave</option>
+                                    <option>Loss Of Pay</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label>Leave Paid Status</label>
+                                <select class="form-control">
+                                    <option></option>
+                                    <option>Paid</option>
+                                    <option>Unpaid</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label>No. of Leaves</label>
+                                <select class="form-control">
+                                    <option></option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <div class="form-group mt-4">
+                                <button class="btn commonButton ">Submit</button>
+                            </div>
+                        </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- holidy modal ends -->
+
+
+    <div id="preloader"></div>
+
+    <!-- JavaScript Libraries -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.slimscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>

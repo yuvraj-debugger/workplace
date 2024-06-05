@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <!-- Favicon -->
+    <link rel="icon" href="images/mini-logo-green.svg" sizes="any" type="image/svg+xml">
+    <title>Worksuit Tool</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <main class="main-wrapper">
+
+        <header class="header">
+            <div class="header-left">
+                <div class="miniLogo">
+                    <a href="index.html">
+                        <img src="images/mini-logo.svg" alt="mini-logo" />
+                    </a>
+                </div>
+            </div>
+            <div class="header-center">
+                <h1>Softuvo Solutions</h1>
+            </div>
+            <a id="toggle_btn" href="javascript:void(0);">
+                <span class="bar-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </a>
+            <ul class="header-new-menu">
+                <li>
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">Clients</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="javascript:void(0);">Clients</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">Projects</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="javascript:void(0);">Projects</a>
+                        <a class="dropdown-item" href="javascript:void(0);">Tasks</a>
+                        <a class="dropdown-item" href="javascript:void(0);">Task Board</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">Leads</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="javascript:void(0);">Leads</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">Tickets</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="javascript:void(0);">Tickets</a>
+                    </div>
+                </li>
+            </ul>
+            <a id="mobile_btn" class="mobile_btn" href="#sidebar"><i class="fa-solid fa-bars"></i></a>
+            <div class="user-menu">
+                <div class="searchbar">
+                    <input class="searchbar__field" type="search" placeholder="Search here">
+                    <button class="searchbar__button" type="button"><i
+                            class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div class="headerIcons">
+                    <ul>
+                        <li class="headerIcons__icon"><button type="button"><img src="images/header/check-icon.svg"
+                                    alt=""> <span class="counter">2</span></button></li>
+                        <li class="headerIcons__icon"><button type="button"><img src="images/header/time-icon.svg"
+                                    alt=""> <span class="counter">5</span></button></li>
+                        <li class="headerIcons__icon"><button type="button"><img src="images/header/add-icon.svg"
+                                    alt=""> <span class="counter">2</span></button></li>
+                        <li class="headerIcons__icon"><button type="button"><img src="images/header/bell-icon.svg"
+                                    alt=""> <span class="counter">12</span></button></li>
+                    </ul>
+                </div>
+                <div class="avatar">
+                    <div class="dropdown">
+                        <button class="avatar__button dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <img class="avatar__image" src="images/user-img.jpg" alt="user-img" />
+                            <span>Franklin Jr.</span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a href="javascript:void(0);">My Profile</a></li>
+                            <li><a href="javascript:void(0);">Setting</a></li>
+                            <li><a href="javascript:void(0);">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header><!--Header End-->
+
+        <div class="sidebar" id="sidebar">
+            <div class="slimScrollDiv">
+                <div class="sidebar-left slimscroll">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a href="javascript:void(0);" class="nav-link active" id="home-tab" data-bs-toggle="tab"
+                                data-bs-target="#home" type="button" role="tab" aria-controls="home"
+                                aria-selected="true"><span data-bs-delay='{"show":"1000", "hide":"0"}'
+                                    data-bs-offset="0,10" data-bs-toggle="tooltip" data-bs-placement="right"
+                                    data-bs-title="Home"><img src="images/navbar/home-icon.svg" alt="" /></span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:void(0);" class="nav-link" id="app-tab" data-bs-toggle="tab"
+                                data-bs-target="#app" type="button" role="tab" aria-controls="app"
+                                aria-selected="false"><span data-bs-delay='{"show":"1000", "hide":"0"}'
+                                    data-bs-offset="0,10" data-bs-toggle="tooltip" data-bs-placement="right"
+                                    data-bs-title="App"><img src="images/navbar/app-icon.svg" alt="" /></span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:void(0);" class="nav-link" id="employees-tab" data-bs-toggle="tab"
+                                data-bs-target="#employees" type="button" role="tab" aria-controls="employees"
+                                aria-selected="false"><span data-bs-delay='{"show":"1000", "hide":"0"}'
+                                    data-bs-offset="0,10" data-bs-toggle="tooltip" data-bs-placement="right"
+                                    data-bs-title="Employees"><img src="images/navbar/employees-icon.svg"
+                                        alt="" /></span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:void(0);" class="nav-link" id="clients-tab" data-bs-toggle="tab"
+                                data-bs-target="#clients" type="button" role="tab" aria-controls="clients"
+                                aria-selected="false"><span data-bs-delay='{"show":"1000", "hide":"0"}'
+                                    data-bs-offset="0,10" data-bs-toggle="tooltip" data-bs-placement="right"
+                                    data-bs-title="Clients"><img src="images/navbar/clients-icon.svg"
+                                        alt="" /></span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sidebar-right">
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <p>Attendance</p>
+                        <ul>
+                            <li><a href="attendance.html">Attendance (Admin)</a></li>
+                            <li><a class="active" href="javascript:void(0);">Attendance (Employee)</a></li>
+                            <li><a href="javascript:void(0);">Attendance Info</a></li>
+                            <li><a href="javascript:void(0);">Regularization</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="app" role="tabpanel" aria-labelledby="app-tab">
+                        <p>App</p>
+                        <ul>
+                            <li><a href="javascript:void(0);">Admin Dashboard</a></li>
+                            <li><a href="javascript:void(0);">Employee Dashboard</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="employees" role="tabpanel" aria-labelledby="employees-tab">
+                        <p>Employees</p>
+                        <ul>
+                            <li><a href="javascript:void(0);">Admin Dashboard</a></li>
+                            <li><a href="javascript:void(0);">Employee Dashboard</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="clients" role="tabpanel" aria-labelledby="clients-tab">
+                        <p>Clients</p>
+                        <ul>
+                            <li><a href="javascript:void(0);">Admin Dashboard</a></li>
+                            <li><a href="javascript:void(0);">Employee Dashboard</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div><!--Sidebar End-->
+
+        <div class="page-wrapper">
+            <div class="content container-fluid">
+                <div class="page-head-box">
+                    <h3>Attendance</h3>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="index.html">Dashboard</a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">Attendance</li>
+                        </ol>
+                    </nav>
+                </div>
+
+                <div class="setting">
+                    <div class="dashboardSection">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="dashboardSection__body">
+                                    <h4>Timesheet</h4>
+                                    <div class="punchSection">
+                                        <div class="punchImg">
+                                            <img src="images/punch.svg" />
+                                        </div>
+                                        <div class="punchTime">
+                                            <p>Punch In at <br /> <span class="green">Wed, 11th Jun 2023 10.00 AM</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="punchTimer">
+                                        <div class="timeWrapper">
+                                            <div class="timeWrapper__circle pulse">
+                                                <div class="clock"></div>
+                                            </div>
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <p class="green">Punch In</p>
+                                            <input class="form-check-input" type="checkbox" role="switch"
+                                                id="flexSwitchCheckDefault">
+                                            <p class="red">Punch Out</p>
+                                        </div>
+                                        <div class="extraTime">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <h6>Break</h6>
+                                                    <h5>1.21 hrs</h5>
+                                                </div>
+                                                <div class="col-6">
+                                                    <h6>Overtime</h6>
+                                                    <h5>3.00 hrs</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="profileCard commonBoxShadow rounded-1 my-3">
+                                    <a class="editIcon" data-bs-toggle="modal" data-bs-target="#eduInfo"
+                                        href="javascript:void(0);">
+                                        <img src="images/editIcon.svg">
+                                    </a>
+                                    <h3>Education Information</h3>
+                                    <ul class="eduList">
+                                        <li class="mb-0">
+                                            <p><b>Punch In at</b></p>
+                                            <p class="grey"><i class="fa-solid fa-clock"></i> 10.00 AM</p>
+                                        </li>
+
+                                        <li class="mb-0">
+                                            <p><b>Punch In at</b></p>
+                                            <p class="grey"><i class="fa-solid fa-clock"></i> 10.00 AM</p>
+                                        </li>
+
+
+                                        <li class="mb-0">
+                                            <p><b>Punch In at</b></p>
+                                            <p class="grey"><i class="fa-solid fa-clock"></i> 10.00 AM</p>
+                                        </li>
+
+
+                                        <li class="mb-0">
+                                            <p><b>Punch In at</b></p>
+                                            <p class="grey"><i class="fa-solid fa-clock"></i> 10.00 AM</p>
+                                        </li>
+
+                                        <li class="mb-0">
+                                            <p><b>Punch In at</b></p>
+                                            <p class="grey"><i class="fa-solid fa-clock"></i> 10.00 AM</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="dashboardSection__body">
+                                    <h4>Statistics</h4>
+                                    <div class="row g-4">
+                                        <div class="col-lg-6">
+                                            <div class="attendanceCard">
+                                                <p>Today</p>
+                                                <p class="orange progressText">3.45 / 8 hrs</p>
+
+                                                <div class="progress" role="progressbar" aria-label="Warning example"
+                                                    aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                                    <div class="progress-bar bg-warning" style="width: 75%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6">
+                                            <div class="attendanceCard">
+                                                <p>This Week</p>
+                                                <p class="blue progressText">3.45 / 8 hrs</p>
+                                                <div class="progress" role="progressbar" aria-label="Warning example"
+                                                    aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                                    <div class="progress-bar bg-primary" style="width: 75%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6">
+                                            <div class="attendanceCard">
+                                                <p>This Month</p>
+                                                <p class="green progressText">3.45 / 8 hrs</p>
+                                                <div class="progress" role="progressbar" aria-label="Warning example"
+                                                    aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                                    <div class="progress-bar bg-success" style="width: 75%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6">
+                                            <div class="attendanceCard">
+                                                <p>Remaining</p>
+                                                <p class="red progressText">3.45 / 8 hrs</p>
+                                                <div class="progress" role="progressbar" aria-label="Warning example"
+                                                    aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                                    <div class="progress-bar bg-danger" style="width: 75%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <div class="attendanceCard">
+                                                <p>Overtime</p>
+                                                <p class="grey progressText">4 hrs</p>
+                                                <div class="progress" role="progressbar" aria-label="Warning example"
+                                                    aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                                    <div class="progress-bar bg-grey" style="width: 75%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pageFilter mb-3">
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <div class="leftFilters">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control datePicker" id="floatingInput"
+                                        placeholder="Date">
+                                    <label for="floatingInput">Date</label>
+                                </div>
+                                <div class="form-floating">
+                                    <select class="form-select" id="floatingSelect"
+                                        aria-label="Floating label select example">
+                                        <option selected>--Select--</option>
+                                        <option value="1">January</option>
+                                        <option value="2">February</option>
+                                        <option value="2">March</option>
+                                    </select>
+                                    <label for="floatingSelect">Month</label>
+                                </div>
+                                <div class="form-floating">
+                                    <select class="form-select" id="floatingSelect"
+                                        aria-label="Floating label select example">
+                                        <option selected>--Select--</option>
+                                        <option value="1">2023</option>
+                                        <option value="2">2022</option>
+                                        <option value="2">2021</option>
+                                    </select>
+                                    <label for="floatingSelect">Year</label>
+                                </div>
+                                <button class="btn btn-search"><img src="images/iconSearch.svg" /> Search here</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboardSection__body">
+                    <div class="commonDataTable">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Date</th>
+                                        <th>Punch In</th>
+                                        <th>Punch Out</th>
+                                        <th>Production</th>
+                                        <th>Break</th>
+                                        <th>Others</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>01 Jan 2016</td>
+                                        <td>10 AM</td>
+                                        <td>07 AM</td>
+                                        <td>9 hrs</td>
+                                        <td>1hr</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>01 Jan 2016</td>
+                                        <td>10 AM</td>
+                                        <td>07 AM</td>
+                                        <td>9 hrs</td>
+                                        <td>1hr</td>
+                                        <td>0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- common pagination starts -->
+                    <div class="commonPagination my-4">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="commonPagination__content justify-content-end">
+                                    <p>Showing <span>1 to 10</span> of <span>16 entries</span></p>
+                                    <div class="paginationButton">
+                                        <a href="javascript:void(0);">Previous</a>
+                                        <a href="javascript:void(0);">1</a>
+                                        <a href="javascript:void(0);">2</a>
+                                        <a href="javascript:void(0);">Next</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- common pagination ends -->
+                </div>
+
+            </div>
+        </div><!-- Page wrapper end -->
+
+    </main>
+
+
+    <div id="preloader"></div>
+
+    <!-- JavaScript Libraries -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.slimscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+    <script src="js/custom.js"></script>
+    <script>
+        function showTime() {
+            // to get current time/ date.
+            var date = new Date();
+            // to get the current hour
+            var h = date.getHours();
+            // to get the current minutes
+            var m = date.getMinutes();
+            //to get the current second
+            var s = date.getSeconds();
+            // AM, PM setting
+            var session = "";
+
+            //conditions for times behavior 
+            if (h == 0) {
+                h = 12;
+            }
+            if (h >= 12) {
+                session = "";
+            }
+
+            if (h > 12) {
+                h = h - 12;
+            }
+            m = (m < 10) ? m = "0" + m : m;
+            s = (s < 10) ? s = "0" + s : s;
+
+            //putting time in one variable
+            var time = h + ":" + m + ":" + s + " " + session;
+            //putting time in our div
+            $('.clock').html(time);
+            //to change time in every seconds
+            setTimeout(showTime, 1000);
+        }
+        showTime();
+    </script>
+</body>
+
+</html>

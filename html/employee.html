@@ -1,0 +1,686 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <!-- Favicon -->
+    <link rel="icon" href="images/mini-logo-green.svg" sizes="any" type="image/svg+xml">
+    <title>Worksuit Tool</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <main class="main-wrapper">
+        <header class="header">
+            <div class="header-left">
+                <div class="miniLogo">
+                    <a href="index.html">
+                        <img src="images/mini-logo.svg" alt="mini-logo" />
+                    </a>
+                </div>
+            </div>
+            <div class="header-center">
+                <h1>Softuvo Solutions</h1>
+            </div>
+            <a id="toggle_btn" href="javascript:void(0);">
+                <span class="bar-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </a>
+            <ul class="header-new-menu">
+                <li>
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">Clients</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="javascript:void(0);">Clients</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">Projects</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="javascript:void(0);">Projects</a>
+                        <a class="dropdown-item" href="javascript:void(0);">Tasks</a>
+                        <a class="dropdown-item" href="javascript:void(0);">Task Board</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">Leads</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="javascript:void(0);">Leads</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">Tickets</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="javascript:void(0);">Tickets</a>
+                    </div>
+                </li>
+            </ul>
+            <a id="mobile_btn" class="mobile_btn" href="#sidebar"><i class="fa-solid fa-bars"></i></a>
+            <div class="user-menu">
+                <div class="searchbar">
+                    <input class="searchbar__field" type="search" placeholder="Search here">
+                    <button class="searchbar__button" type="button"><i
+                            class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div class="headerIcons">
+                    <ul>
+                        <li class="headerIcons__icon"><button type="button"><img src="images/header/check-icon.svg"
+                                    alt=""> <span class="counter">2</span></button></li>
+                        <li class="headerIcons__icon"><button type="button"><img src="images/header/time-icon.svg"
+                                    alt=""> <span class="counter">5</span></button></li>
+                        <li class="headerIcons__icon"><button type="button"><img src="images/header/add-icon.svg"
+                                    alt=""> <span class="counter">2</span></button></li>
+                        <li class="headerIcons__icon"><button type="button"><img src="images/header/bell-icon.svg"
+                                    alt=""> <span class="counter">12</span></button></li>
+                    </ul>
+                </div>
+                <div class="avatar">
+                    <div class="dropdown">
+                        <button class="avatar__button dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <img class="avatar__image" src="images/user-img.jpg" alt="user-img" />
+                            <span>Franklin Jr.</span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a href="javascript:void(0);">My Profile</a></li>
+                            <li><a href="javascript:void(0);">Setting</a></li>
+                            <li><a href="javascript:void(0);">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header><!--Header End-->
+
+        <div class="sidebar" id="sidebar">
+            <div class="slimScrollDiv">
+                <div class="sidebar-left slimscroll">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a href="javascript:void(0);" class="nav-link active" id="home-tab" data-bs-toggle="tab"
+                                data-bs-target="#home" type="button" role="tab" aria-controls="home"
+                                aria-selected="true"><span data-bs-delay='{"show":"1000", "hide":"0"}'
+                                    data-bs-offset="0,10" data-bs-toggle="tooltip" data-bs-placement="right"
+                                    data-bs-title="Home"><img src="images/navbar/home-icon.svg" alt="" /></span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:void(0);" class="nav-link" id="app-tab" data-bs-toggle="tab"
+                                data-bs-target="#app" type="button" role="tab" aria-controls="app"
+                                aria-selected="false"><span data-bs-delay='{"show":"1000", "hide":"0"}'
+                                    data-bs-offset="0,10" data-bs-toggle="tooltip" data-bs-placement="right"
+                                    data-bs-title="App"><img src="images/navbar/app-icon.svg" alt="" /></span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:void(0);" class="nav-link" id="employees-tab" data-bs-toggle="tab"
+                                data-bs-target="#employees" type="button" role="tab" aria-controls="employees"
+                                aria-selected="false"><span data-bs-delay='{"show":"1000", "hide":"0"}'
+                                    data-bs-offset="0,10" data-bs-toggle="tooltip" data-bs-placement="right"
+                                    data-bs-title="Employees"><img src="images/navbar/employees-icon.svg"
+                                        alt="" /></span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:void(0);" class="nav-link" id="clients-tab" data-bs-toggle="tab"
+                                data-bs-target="#clients" type="button" role="tab" aria-controls="clients"
+                                aria-selected="false"><span data-bs-delay='{"show":"1000", "hide":"0"}'
+                                    data-bs-offset="0,10" data-bs-toggle="tooltip" data-bs-placement="right"
+                                    data-bs-title="Clients"><img src="images/navbar/clients-icon.svg"
+                                        alt="" /></span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sidebar-right">
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <p>HR</p>
+                        <ul>
+                            <li><a href="javascript:void(0);">Overview</a></li>
+                            <li><a href="javascript:void(0);">Employee</a></li>
+                            <li><a href="javascript:void(0);">Employees Designation</a></li>
+                            <li><a href="javascript:void(0);">Employees Department</a></li>
+                            <li><a href="javascript:void(0);">Employees Seperate Out</a></li>
+                            <li><a href="javascript:void(0);">Reporting Structure</a></li>
+                            <li><a href="javascript:void(0);">Mass Communication</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="app" role="tabpanel" aria-labelledby="app-tab">
+                        <p>App</p>
+                        <ul>
+                            <li><a href="javascript:void(0);">Admin Dashboard</a></li>
+                            <li><a href="javascript:void(0);">Employee Dashboard</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="employees" role="tabpanel" aria-labelledby="employees-tab">
+                        <p>Employees</p>
+                        <ul>
+                            <li><a href="javascript:void(0);">Admin Dashboard</a></li>
+                            <li><a href="javascript:void(0);">Employee Dashboard</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="clients" role="tabpanel" aria-labelledby="clients-tab">
+                        <p>Clients</p>
+                        <ul>
+                            <li><a href="javascript:void(0);">Admin Dashboard</a></li>
+                            <li><a href="javascript:void(0);">Employee Dashboard</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div><!--Sidebar End-->
+
+        <div class="page-wrapper">
+            <div class="content container-fluid">
+                <div class="page-head-box">
+                    <h3>Employees</h3>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="index.html">Dashboard</a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">Employee</li>
+                        </ol>
+                    </nav>
+                </div>
+
+                <div class="pageFilter mb-3">
+                    <div class="row">
+                        <div class="col-xl-7">
+                            <div class="leftFilters">
+                                <div class="form-floating">
+                                    <select class="form-select" id="floatingSelect"
+                                        aria-label="Floating label select example">
+                                        <option selected>All</option>
+                                        <option value="1">All</option>
+                                        <option value="2">All</option>
+                                        <option value="3">All</option>
+                                    </select>
+                                    <label for="floatingSelect">Employee</label>
+                                </div>
+
+                                <div class="form-floating">
+                                    <select class="form-select" id="floatingSelect"
+                                        aria-label="Floating label select example">
+                                        <option selected>All</option>
+                                        <option value="1">All</option>
+                                        <option value="2">All</option>
+                                        <option value="3">All</option>
+                                    </select>
+                                    <label for="floatingSelect">Designation</label>
+                                </div>
+
+                                <div class="form-floating">
+                                    <select class="form-select" id="floatingSelect"
+                                        aria-label="Floating label select example">
+                                        <option selected>All</option>
+                                        <option value="1">All</option>
+                                        <option value="2">All</option>
+                                        <option value="3">All</option>
+                                    </select>
+                                    <label for="floatingSelect">Employment Status</label>
+                                </div>
+
+                                <button class="btn btn-search"><img src="images/iconSearch.svg" /> Search here</button>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-5">
+                            <div class="rightFilter">
+                                <button class="">
+                                    <svg width="30" height="27" viewBox="0 0 30 27" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M0 3.375C0 1.51348 1.49479 0 3.33333 0H11.6667V6.75C11.6667 7.6834 12.4115 8.4375 13.3333 8.4375H20V15.1875H11.25C10.5573 15.1875 10 15.7518 10 16.4531C10 17.1545 10.5573 17.7188 11.25 17.7188H20V23.625C20 25.4865 18.5052 27 16.6667 27H3.33333C1.49479 27 0 25.4865 0 23.625V3.375ZM20 17.7188V15.1875H25.7344L23.7031 13.1309C23.2135 12.6352 23.2135 11.8336 23.7031 11.3432C24.1927 10.8527 24.9844 10.8475 25.4688 11.3432L29.6354 15.5619C30.125 16.0576 30.125 16.8592 29.6354 17.3496L25.4688 21.5684C24.9792 22.0641 24.1875 22.0641 23.7031 21.5684C23.2188 21.0727 23.2135 20.2711 23.7031 19.7807L25.7344 17.724H20V17.7188ZM20 6.75H13.3333V0L20 6.75Z"
+                                            fill="#1F1F1F" />
+                                    </svg>
+                                </button>
+
+                                <button class="">
+                                    <svg width="22" height="26" viewBox="0 0 22 26" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M11.9375 10.2498H10.0625V4.07515L6.97578 7.16304C6.79987 7.33896 6.56128 7.43778 6.3125 7.43778C6.06372 7.43778 5.82513 7.33895 5.64922 7.16304C5.47331 6.98713 5.37448 6.74854 5.37448 6.49976C5.37448 6.25098 5.47331 6.01239 5.64922 5.83648L10.3367 1.14898C10.4238 1.06181 10.5272 0.992665 10.641 0.945486C10.7548 0.898307 10.8768 0.874023 11 0.874023C11.1232 0.874023 11.2452 0.898307 11.359 0.945486C11.4728 0.992665 11.5762 1.06181 11.6633 1.14898L16.3508 5.83648C16.5267 6.01239 16.6255 6.25098 16.6255 6.49976C16.6255 6.74854 16.5267 6.98713 16.3508 7.16304C16.1749 7.33896 15.9363 7.43778 15.6875 7.43778C15.4387 7.43778 15.2001 7.33896 15.0242 7.16304L11.9375 4.07515V10.2498ZM19.4375 10.2498H11.9375V14.9373C11.9375 15.1859 11.8387 15.4244 11.6629 15.6002C11.4871 15.776 11.2486 15.8748 11 15.8748C10.7514 15.8748 10.5129 15.776 10.3371 15.6002C10.1613 15.4244 10.0625 15.1859 10.0625 14.9373V10.2498H2.5625C2.06522 10.2498 1.58831 10.4473 1.23667 10.7989C0.885044 11.1506 0.6875 11.6275 0.6875 12.1248V23.3748C0.6875 23.872 0.885044 24.349 1.23667 24.7006C1.58831 25.0522 2.06522 25.2498 2.5625 25.2498H19.4375C19.9348 25.2498 20.4117 25.0522 20.7633 24.7006C21.115 24.349 21.3125 23.872 21.3125 23.3748V12.1248C21.3125 11.6275 21.115 11.1506 20.7633 10.7989C20.4117 10.4473 19.9348 10.2498 19.4375 10.2498Z"
+                                            fill="#1F1F1F" />
+                                    </svg>
+                                </button>
+
+                                <button class="">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M1.6875 10.1251C1.43886 10.1251 1.2004 10.0263 1.02459 9.85049C0.848772 9.67468 0.75 9.43622 0.75 9.18758V1.68945C0.75 1.44081 0.848772 1.20236 1.02459 1.02654C1.2004 0.850725 1.43886 0.751953 1.6875 0.751953H9.1875C9.43614 0.751953 9.6746 0.850725 9.85041 1.02654C10.0262 1.20236 10.125 1.44081 10.125 1.68945V9.18758C10.125 9.43622 10.0262 9.67468 9.85041 9.85049C9.6746 10.0263 9.43614 10.1251 9.1875 10.1251H1.6875ZM14.8125 10.1251C14.5639 10.1251 14.3254 10.0263 14.1496 9.85049C13.9738 9.67468 13.875 9.43622 13.875 9.18758V1.68945C13.875 1.44081 13.9738 1.20236 14.1496 1.02654C14.3254 0.850725 14.5639 0.751953 14.8125 0.751953H22.3106C22.5593 0.751953 22.7977 0.850725 22.9735 1.02654C23.1494 1.20236 23.2481 1.44081 23.2481 1.68945V9.18758C23.2481 9.43622 23.1494 9.67468 22.9735 9.85049C22.7977 10.0263 22.5593 10.1251 22.3106 10.1251H14.8125ZM1.6875 23.2501C1.43886 23.2501 1.2004 23.1513 1.02459 22.9755C0.848772 22.7997 0.75 22.5612 0.75 22.3126V14.8126C0.75 14.5639 0.848772 14.3255 1.02459 14.1497C1.2004 13.9739 1.43886 13.8751 1.6875 13.8751H9.1875C9.43614 13.8751 9.6746 13.9739 9.85041 14.1497C10.0262 14.3255 10.125 14.5639 10.125 14.8126V22.3126C10.125 22.5612 10.0262 22.7997 9.85041 22.9755C9.6746 23.1513 9.43614 23.2501 9.1875 23.2501H1.6875ZM14.8125 23.2501C14.5639 23.2501 14.3254 23.1513 14.1496 22.9755C13.9738 22.7997 13.875 22.5612 13.875 22.3126V14.8126C13.875 14.5639 13.9738 14.3255 14.1496 14.1497C14.3254 13.9739 14.5639 13.8751 14.8125 13.8751H22.3106C22.5593 13.8751 22.7977 13.9739 22.9735 14.1497C23.1494 14.3255 23.2481 14.5639 23.2481 14.8126V22.3126C23.2481 22.5612 23.1494 22.7997 22.9735 22.9755C22.7977 23.1513 22.5593 23.2501 22.3106 23.2501H14.8125Z"
+                                            fill="#1F1F1F" />
+                                    </svg>
+                                </button>
+
+                                <button class="">
+                                    <svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M22 17.875C22.4815 17.8752 22.9445 18.0607 23.293 18.393C23.6415 18.7253 23.8488 19.1789 23.8719 19.6599C23.895 20.1409 23.7323 20.6123 23.4173 20.9765C23.1023 21.3407 22.6593 21.5698 22.18 21.6162L22 21.625H2C1.51848 21.6248 1.05551 21.4393 0.707017 21.107C0.358527 20.7747 0.151235 20.3211 0.128095 19.8401C0.104954 19.3591 0.26774 18.8877 0.582719 18.5235C0.897699 18.1593 1.34073 17.9302 1.82 17.8838L2 17.875H22ZM22 9.125C22.4973 9.125 22.9742 9.32254 23.3258 9.67417C23.6775 10.0258 23.875 10.5027 23.875 11C23.875 11.4973 23.6775 11.9742 23.3258 12.3258C22.9742 12.6775 22.4973 12.875 22 12.875H2C1.50272 12.875 1.02581 12.6775 0.674175 12.3258C0.322544 11.9742 0.125 11.4973 0.125 11C0.125 10.5027 0.322544 10.0258 0.674175 9.67417C1.02581 9.32254 1.50272 9.125 2 9.125H22ZM22 0.375C22.4973 0.375 22.9742 0.572544 23.3258 0.924175C23.6775 1.27581 23.875 1.75272 23.875 2.25C23.875 2.74728 23.6775 3.22419 23.3258 3.57583C22.9742 3.92746 22.4973 4.125 22 4.125H2C1.50272 4.125 1.02581 3.92746 0.674175 3.57583C0.322544 3.22419 0.125 2.74728 0.125 2.25C0.125 1.75272 0.322544 1.27581 0.674175 0.924175C1.02581 0.572544 1.50272 0.375 2 0.375H22Z"
+                                            fill="#1F1F1F" />
+                                    </svg>
+                                </button>
+
+                                <a class="addBtn" data-bs-toggle="modal" data-bs-target="#personalInfo"
+                                    href="javascript:void(0);"><i class="fa-solid fa-plus"></i> Add Employee</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboardSection">
+                    <div class="dashboardSection__body">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="employeeCard">
+                                    <div class="head">
+                                        <img src="images/messageIcon.svg" title="Message" alt="Message" />
+
+                                        <div class="dropdown">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                <img src="images/infoIcon.svg" title="More Info" alt="More Info" />
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="javascript:void(0);">Edit</a></li>
+                                                <li><a class="dropdown-item" href="javascript:void(0);">Delete</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="employeeBody">
+                                        <img src="images/userImg.png" alt="Profile Image" title="Profile Image" />
+                                        <h5>Alex John</h5>
+                                        <p>Alexjohn@gmail.com</p>
+                                        <p><b>9876543210</b></p>
+                                        <span class="designation">UI Designer</span>
+                                        <a class="detailLink" href="profile.html">View Profile</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3">
+                                <div class="employeeCard">
+                                    <div class="head">
+                                        <img src="images/messageIcon.svg" title="Message" alt="Message" />
+
+                                        <div class="dropdown">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                <img src="images/infoIcon.svg" title="More Info" alt="More Info" />
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="javascript:void(0);">Edit</a></li>
+                                                <li><a class="dropdown-item" href="javascript:void(0);">Delete</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="employeeBody">
+                                        <img src="images/userImg.png" alt="Profile Image" title="Profile Image" />
+                                        <h5>Alex John</h5>
+                                        <p>Alexjohn@gmail.com</p>
+                                        <p><b>9876543210</b></p>
+                                        <span class="designation">UI Designer</span>
+                                        <a class="detailLink" href="profile.html">View Profile</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3">
+                                <div class="employeeCard">
+                                    <div class="head">
+                                        <img src="images/messageIcon.svg" title="Message" alt="Message" />
+
+                                        <div class="dropdown">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                <img src="images/infoIcon.svg" title="More Info" alt="More Info" />
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="javascript:void(0);">Edit</a></li>
+                                                <li><a class="dropdown-item" href="javascript:void(0);">Delete</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="employeeBody">
+                                        <img src="images/userImg.png" alt="Profile Image" title="Profile Image" />
+                                        <h5>Alex John</h5>
+                                        <p>Alexjohn@gmail.com</p>
+                                        <p><b>9876543210</b></p>
+                                        <span class="designation">UI Designer</span>
+                                        <a class="detailLink" href="profile.html">View Profile</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3">
+                                <div class="employeeCard">
+                                    <div class="head">
+                                        <img src="images/messageIcon.svg" title="Message" alt="Message" />
+
+                                        <div class="dropdown">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                <img src="images/infoIcon.svg" title="More Info" alt="More Info" />
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="javascript:void(0);">Edit</a></li>
+                                                <li><a class="dropdown-item" href="javascript:void(0);">Delete</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="employeeBody">
+                                        <img src="images/userImg.png" alt="Profile Image" title="Profile Image" />
+                                        <h5>Alex John</h5>
+                                        <p>Alexjohn@gmail.com</p>
+                                        <p><b>9876543210</b></p>
+                                        <span class="designation">UI Designer</span>
+                                        <a class="detailLink" href="profile.html">View Profile</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3">
+                                <div class="employeeCard">
+                                    <div class="head">
+                                        <img src="images/messageIcon.svg" title="Message" alt="Message" />
+
+                                        <div class="dropdown">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                <img src="images/infoIcon.svg" title="More Info" alt="More Info" />
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="javascript:void(0);">Edit</a></li>
+                                                <li><a class="dropdown-item" href="javascript:void(0);">Delete</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="employeeBody">
+                                        <img src="images/userImg.png" alt="Profile Image" title="Profile Image" />
+                                        <h5>Alex John</h5>
+                                        <p>Alexjohn@gmail.com</p>
+                                        <p><b>9876543210</b></p>
+                                        <span class="designation">UI Designer</span>
+                                        <a class="detailLink" href="profile.html">View Profile</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3">
+                                <div class="employeeCard">
+                                    <div class="head">
+                                        <img src="images/messageIcon.svg" title="Message" alt="Message" />
+
+                                        <div class="dropdown">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                <img src="images/infoIcon.svg" title="More Info" alt="More Info" />
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="javascript:void(0);">Edit</a></li>
+                                                <li><a class="dropdown-item" href="javascript:void(0);">Delete</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="employeeBody">
+                                        <img src="images/userImg.png" alt="Profile Image" title="Profile Image" />
+                                        <h5>Alex John</h5>
+                                        <p>Alexjohn@gmail.com</p>
+                                        <p><b>9876543210</b></p>
+                                        <span class="designation">UI Designer</span>
+                                        <a class="detailLink" href="profile.html">View Profile</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3">
+                                <div class="employeeCard">
+                                    <div class="head">
+                                        <img src="images/messageIcon.svg" title="Message" alt="Message" />
+
+                                        <div class="dropdown">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                <img src="images/infoIcon.svg" title="More Info" alt="More Info" />
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="javascript:void(0);">Edit</a></li>
+                                                <li><a class="dropdown-item" href="javascript:void(0);">Delete</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="employeeBody">
+                                        <img src="images/userImg.png" alt="Profile Image" title="Profile Image" />
+                                        <h5>Alex John</h5>
+                                        <p>Alexjohn@gmail.com</p>
+                                        <p><b>9876543210</b></p>
+                                        <span class="designation">UI Designer</span>
+                                        <a class="detailLink" href="profile.html">View Profile</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3">
+                                <div class="employeeCard">
+                                    <div class="head">
+                                        <img src="images/messageIcon.svg" title="Message" alt="Message" />
+
+                                        <div class="dropdown">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                <img src="images/infoIcon.svg" title="More Info" alt="More Info" />
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="javascript:void(0);">Edit</a></li>
+                                                <li><a class="dropdown-item" href="javascript:void(0);">Delete</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="employeeBody">
+                                        <img src="images/userImg.png" alt="Profile Image" title="Profile Image" />
+                                        <h5>Alex John</h5>
+                                        <p>Alexjohn@gmail.com</p>
+                                        <p><b>9876543210</b></p>
+                                        <span class="designation">UI Designer</span>
+                                        <a class="detailLink" href="profile.html">View Profile</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- common pagination starts -->
+                        <div class="commonPagination my-4">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="commonPagination__content">
+                                        <p>Showing <span>1 to 10</span> of <span>16 entries</span></p>
+                                        <div class="paginationButton">
+                                            <a href="javascript:void(0);">Previous</a>
+                                            <a href="javascript:void(0);">1</a>
+                                            <a href="javascript:void(0);">2</a>
+                                            <a href="javascript:void(0);">Next</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- common pagination ends -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- personal info modal starts -->
+    <div class="modal fade personalInfo" id="personalInfo" data-bs-backdrop="static" data-bs-keyboard="false"
+        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1> -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h3 class="text-center">Add Employee</h3>
+
+                    <div class="userProfileSection">
+                        <img src="images/userImg.png" />
+                        <span>
+                            edit
+                            <input title="Upload Image" type="file" />
+                        </span>
+                    </div>
+
+                    <h3 class="text-center green mt-4">SSPl01</h3>
+                    <form action="" class="px-3 commonForm">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="name">First Name<sup>*</sup></label>
+                                    <input name="name" type="text" class="form-control" placeholder="First Name" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Last Name</label>
+                                    <input type="text" class="form-control" placeholder="Last Name" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="email">Email<sup>*</sup></label>
+                                    <input name="email" type="email" class="form-control" placeholder="Enter Email" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Change Password</label>
+                                    <input type="password" class="form-control" placeholder="Enter Password" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Birth Date</label>
+                                    <input type="text" class="form-control datePicker" placeholder="Birth Date" />
+                                    <span class="form-control-icon">
+                                        <img src="images/calenderIcon.svg" />
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="date">Joining Date<sup>*</sup></label>
+                                    <input name="date" type="text" class="form-control datePicker"
+                                        placeholder="Joining Date" />
+                                    <span class="form-control-icon">
+                                        <img src="images/calenderIcon.svg" />
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Phone</label>
+                                    <input type="number" class="form-control" placeholder="Enter Phone" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="dapartment">Select Department<sup>*</sup></label>
+                                    <select name="dapartment" id="department" class="form-control">
+                                        <option selected value="">Select Department</option>
+                                        <option value="1">Front End</option>
+                                        <option value="2">DevOps</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="designation">Select Designation<sup>*</sup></label>
+                                    <select name="designation" id="designation" class="form-control" required>
+                                        <option selected value="">Select Designation</option>
+                                        <option value="1">Manager</option>
+                                        <option value="2">Senior</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="d-block">Select Reporting Manager</label>
+                                    <select class="form-control manager">
+                                        <option value='option-1' data-src="images/userImg.png">Reporting Manager
+                                        </option>
+                                        <option value='option-2' data-src="http://placehold.it/45x45">Reporting Manager
+                                        </option>
+                                        <option value='option-3' data-src="http://placehold.it/45x45">Reporting Manager
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Can this user login to the app?</label>
+                                    <input type="text" class="form-control" placeholder="Yes/No" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Can this user receive email noification</label>
+                                    <input type="text" class="form-control" placeholder="Yes/No" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Workplace</label>
+                                    <select class="form-control">
+                                        <option selected>Select Workplace</option>
+                                        <option>WFH</option>
+                                        <option>WFO</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <div class="form-group mt-4">
+                                    <button class="btn commonButton ">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- personal info modal ends -->
+
+    <div id="preloader"></div>
+
+    <!-- JavaScript Libraries -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.slimscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+<!-- Favicon -->
+<link rel="icon" href="images/mini-logo-green.svg" sizes="any" type="image/svg+xml">
+<title>Worksuit Tool - Login</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<main class="wrapper">
+    <!-- login starts -->
+    <div class="loginSection d-flex align-items-center d-flex justify-content-center" style="background-image: url(images/loginBg.png);">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 mx-auto">
+                    <div class="loginSection__Form">
+                        
+                        <div class="Form__Head text-center">
+                            <img class="mb-3" src="images/mini-logo-green.svg" alt="Softuvo Logo" title="Softuvo Logo" />
+                            <h4>Login</h4>
+                            <p>Access to our dashboard</p>
+                        </div>
+
+                        <form class="commonForm" action="">
+                            <div class="form-group">
+                                <label for="name">Email Address</label>
+                                <input name="name" type="text" class="form-control" placeholder="Email Address" />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="password" class="d-flex justify-content-between align-items-center">Password <a href="forgot-password.html">Forgot Password?</a></label>
+                                <input name="password" type="password" class="form-control" id="password-field" placeholder="Password" />
+                                <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                            </div>
+
+                            <button type="submit" class="btn btn-save">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- login ends -->
+</main>
+
+
+<!-- JavaScript Libraries -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/jquery.validate.js"></script>
+<script src="js/custom.js"></script>
+</body>
+</html>

@@ -1,0 +1,1623 @@
+
+/*Bg colors*/
+.whiteBg {
+    background-color: $white;
+}
+
+/*Common Button*/
+.commonButton {
+    background-color: $green;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    color: $white;
+    padding: 4px 10px;
+    border: 1px solid $green;
+    border-radius: 100px;
+    padding: 10px 50px;
+    + * {
+        margin-left: 10px;
+    }
+    i {
+        font-size: 12px;
+        margin-right: 3px;
+    }
+    &:hover {
+        background-color: $white;
+        color: $green;
+        border-color: $green;
+    }
+    &--text {
+        background-color: transparent;
+        border-color: transparent;
+        color: $blue;
+        &:hover {
+            background-color: $blue;
+            border-color: $blue;
+            color: $white;
+        }
+    }
+    &--outline {
+        background-color: transparent;
+        border-color: $greyTint4;
+        color: $blue;
+        &:hover {
+            background-color: $blue;
+            border-color: $blue;
+            color: $white;
+        }
+    }
+}
+
+// common dropdown starts
+.dropdown {
+    .dropdown-toggle {
+        background-color: transparent;
+        border: 0;
+        box-shadow: none;
+        &::after {
+            display: none;
+        }
+        &:focus, &:active {
+            background-color: transparent;
+        }
+
+    }
+    .dropdown-menu {
+        padding: 0;
+        border: 0;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        li {
+            a {
+                font-size: 14px;
+                &:hover {
+                    background-color: $green;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+// common dropdown ends
+
+// common pagination starts
+.commonPagination {
+    &__content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        p {
+            color: $dark;
+            margin: 0;
+            span {
+                color: $green;
+            }
+        }
+        .paginationButton {
+            a {
+                background-color: $lightGrey1;
+                border: 1px solid $lightGrey2;
+                color: $lightGreyTint1;
+                padding: 6px 10px;
+                border-radius: 4px;
+                font-weight: 600;
+                @include phone-landscape {
+                    margin-bottom: 5px;
+                    display: inline-block;
+                }
+                &:hover, &.active {
+                    background-color: $green;
+                    color: $white;
+                    border-color: $green;
+                }
+            }
+        }
+    }
+    &.right {
+        .commonPagination__content {
+            justify-content: flex-end;
+        }
+    }
+}
+// common pagination ends
+
+// box shadow starts
+.commonBoxShadow {
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.06);
+}
+// box shadow ends
+
+// common tabs starts
+.commonTabs {
+    @include phone-landscape {
+        display: block;
+        white-space: nowrap;
+        overflow: auto;
+    }
+    .nav-item {
+        display: inline-block;
+        .nav-link {
+            color: $dark;
+            font-weight: 500;
+            font-size: 14px;
+            border-radius: 0;
+            padding: 10px 5px;
+            margin-right: 10px;
+            box-shadow: none;
+            &.active {
+                background-color: transparent;
+                color: $dark;
+                font-weight: 700;
+                border-bottom: 3px solid $green;
+            }
+        }
+    }
+}
+// common tabs ends
+
+/*Breadcrumb*/
+.breadcrumb {
+    margin: 0;
+    padding: 0;
+    .breadcrumb-item {
+        + .breadcrumb-item {
+            &::before {
+                content: "\f105";
+                font-family: "Font Awesome 6 Free";
+                font-weight: 900;
+            }
+        }
+    }
+    li {
+        font-size: 14px;
+        font-weight: 600;
+        &.active {
+            color: $lightGrey;
+        }
+        i {
+            font-size: 13px;
+            opacity: 0.7;
+            margin-right: 5px;
+        }
+    }
+}
+
+/*Form*/
+.form-group {
+    position: relative;
+    margin-top: 15px;
+    label {
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 8px;
+        color: $dark;
+        sup {
+            color: $red;
+        }
+        &.error {
+            color: $red !important;
+            margin: 0 !important;
+        }
+    }
+}
+.form-control-icon {
+    @include position(absolute, $top: 50%, $right: 10px, $bottom: null, $left: null);
+    @include laptop {
+        top: 12px;
+    }
+    img {
+        max-width: 18px;
+        @include laptop {
+            max-width: 16px;       
+        }
+        @include tablet {
+            max-width: 13px;       
+        }
+    }
+    + .form-control {
+        padding-right: 45px;
+    }
+}
+.form-control {
+    background-color: $lightGrey1;
+    height: 45px;
+    font-size: $bodyfontSize;
+    font-weight: 700;
+    color: $dark;
+    padding: 5px 15px;
+    border: 1px solid $lightGrey3;
+    border-radius: 4px;
+    @include tablet {     
+        font-size: 13px;
+    }
+    &:focus {
+        background-color: $lightGrey1;
+        border-color: $lightGrey3;
+        color: $dark;
+        box-shadow: none;
+    }
+    &::placeholder {
+        opacity: 1;
+        // color: $blue;
+        font-weight: 400;
+    }
+}
+.bs-searchbox {
+    .form-control {
+        border-color: $greyTint4;
+    }
+}
+.bootstrap-select {
+    .btn-light {
+        background-color: transparent;
+        font-size: $bodyfontSize;
+        font-weight: 300;
+        height: 32px;
+        border-color: $greyTint3;
+        padding: 5px 15px;
+        @include tablet {     
+            font-size: 13px;
+        }
+        .filter-option-inner-inner {
+            color: $blue;
+        }
+    }
+    .dropdown-menu {
+        li {
+            font-size: $bodyfontSize;
+        }
+    }
+}
+select.form-control {
+    cursor: pointer;
+    background-image: url(../../images/dropdownIcon.svg);
+    background-size: 13px;
+    background-repeat: no-repeat;
+    background-position: 97% center;
+    option {
+        color: $dark;
+    }
+}
+textarea.form-control {
+    height: 145px;
+    padding-top: 20px;
+    resize: none;
+    @include tablet {
+        height: 130px;        
+    }
+}
+.formButtonOuter {
+    margin-top: 50px;
+}
+.form-check-input[type=radio]:checked {
+    --bs-form-check-bg-image: url(../../images/radioBg.svg);
+    background-color: $white;
+    border-color: $green;
+    background-size: 8px;
+}
+.form-check-input[type=checkbox] {
+    cursor: pointer;
+    &:checked {
+        background-color: $green;
+        border-color: $green;
+    }
+}
+
+/*Overlay*/
+.sidebar-overlay {
+    background-color: rgba(0,0,0,.6);
+    @include position(fixed, $top: 60px, $right: null, $bottom: null, $left: 0);
+    display: none;
+    height: 100%;
+    width: 100%;
+    z-index: 1040;
+    z-index: 90;
+    &.opened {
+        display: block;
+    }
+}
+
+/*Page Area Content*/
+.page-wrapper {
+    background-color: $creem;
+    position: relative;
+    left: 0;
+    margin: 0 0 0 260px;
+    padding: 60px 0 0;
+    @include transition;
+    
+    @include tablet {
+        margin: 0;
+    }
+
+    > .content {
+        padding: 20px;
+    }
+
+    .page-head-box {
+        background-color: transparent;
+        position: relative;
+        @include flex;
+        @include aligncenter;
+        @include justifybetween;
+        margin: 0 0 15px;
+        padding: 0 0 10px;
+        border-radius: 5px;
+        h3 {
+            font-size: 24px;
+            color: $dark;
+            font-weight: 800;
+            margin: 0;
+        }
+
+    }
+
+
+}
+
+// login starts
+.loginSection {
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &__Form {
+        background-color: $white;
+        border: 1px solid $whiteTint1;
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.06);
+        border-radius: 5px;
+        padding: 28px;
+
+        .Form__Head {
+            img {
+                width: 100%;
+                max-width: 65px;
+            }
+
+            h4 {
+                font-size: 26px;
+                font-weight: 600;
+                color: $dark;
+            }
+
+            p {
+                font-size: 16px;
+                color: $greyTint6;
+            }
+        }
+
+        form {
+            .form-group {
+                position: relative;
+
+                label {
+                    color: $dark;
+                    font-size: 16px;
+                    font-weight: 500;
+
+                    a {
+                        font-size: $bodyfontSize;
+                        color: $greyTint6;
+                    }
+                }
+
+                .form-control {
+                    background-color: $lightGrey1;
+                    height: 45px;
+                    border: 1px solid $lightGrey2;
+                    border-radius: 4px;
+                    font-weight: 500;
+                    font-size: $bodyfontSize;
+                    color: $dark;
+
+                    &::placeholder {
+                        color: $dark;
+                        font-weight: 500;
+                        opacity: 1;
+                    }
+                }
+
+                .toggle-password {
+                    position: absolute;
+                    color: $greyTint7;
+                    right: 10px;
+                    top: 45px;
+                    cursor: pointer;
+                }
+            }
+
+            .btn-save {
+                width: 100%;
+                background-color: $green;
+                border: 1px solid $green;
+                color: $white;
+                border-radius: 4px;
+                height: 45px;
+                margin-top: 30px;
+                font-weight: 600;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    background-color: $green;
+                    border: 1px solid $green;
+                    color: $white;
+                }
+            }
+
+            p {
+                color: $dark;
+                font-size: $bodyfontSize;
+                text-align: center;
+                margin: 15px 0 0 0;
+
+                a {
+                    color: $blue;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+// login ends
+
+// common cards starts
+.commonCards {
+    margin-bottom: 20px;
+    &__content {
+        background-color: $white;
+        padding: 30px;
+        text-align: center;
+        @include phone-landscape {
+            margin-bottom: 10px;
+            padding: 20px 15px;
+        }
+        h4 {
+            color: $dark;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        p {
+            color: $dark;
+        }
+    }
+}
+// common cards ends
+
+// filters starts
+.pageFilter {
+    background-color: $white;
+    padding: 10px;
+
+    .leftFilters {
+        display: flex;
+        gap: 10px;
+        @include phone-landscape {
+            flex-direction: column;
+        }
+
+        .form-floating {
+            width: 100%;
+            .form-control-icon {
+                top: 15px;
+            }
+        }
+
+        select, .form-control {
+            border: 1px solid $lightGrey2;
+            border-radius: 4px;
+            height: 50px !important;
+            min-height: 50px !important;
+            padding: 19px 10px 0 !important;
+            cursor: pointer;
+        }
+        label {
+            @include small-laptop {
+                padding: 1rem 0.75rem 1rem 5px;
+                font-size: 13px;
+            }
+        }
+        .btn-search {
+            background-color: $dark;
+            color: $white;
+            min-width: 150px;
+            max-width: 150px;
+            border-radius: 4px;
+            @include phone-landscape {
+                min-width: 120px;
+                max-width: 120px;
+                font-size: 14px;
+                padding: 6px 5px;
+            }
+            img {
+                font-size: 14px;
+                margin-right: 5px;
+                @include phone-landscape {
+                    max-width: 12px;
+                    margin-right: 2px;
+                }
+            }
+        }
+        .btn-mark {
+            color: $dark;
+            background-color: $white;
+            border-color: $dark;
+            min-width: 200px;
+            max-width: 200px;
+            font-size: 14px;
+            border-radius: 4px;
+        }
+    }
+
+    .rightFilter {
+        text-align: right;
+        @include laptop {
+            margin-top: 10px;
+        }
+        @include tablet-landscape {
+            margin-top: 10px;
+        }
+        @include tablet {
+            margin-top: 10px;
+        }
+        @include phone-landscape {
+            text-align: left;
+        }
+
+        button, a {
+            margin: 0 8px;
+            @include small-laptop {
+                margin-bottom: 5px;
+            }
+            @include phone-landscape {
+                margin: 0 5px;
+            }
+
+            svg {
+                width: 20px;
+                height: 20px;
+                path {
+                    fill: $dark;
+                    transition: all 0.3s ease-in-out;
+                }
+            }
+
+            &:hover {
+                svg {
+                    path {
+                        fill: $green;
+                    }
+                }
+            }
+        }
+
+        .addBtn {
+            background-color: $green;
+            border: 3px solid rgba(178, 221, 119, 0.7);
+            border-radius: 100px;
+            color: $white;
+            font-weight: 700;
+            font-size: 16px;
+            padding: 11px 20px;
+            display: inline-block;
+            margin-left: 10px;
+            @include phone-landscape {
+                margin: 15px 0 0 0;
+                padding: 8px 10px;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+// filter ends
+
+
+/*Common Data Table*/
+.commonDataTable {
+    .table {
+        vertical-align: middle;
+        th, td {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 20px;
+            padding-right: 20px;
+            white-space: nowrap;
+            vertical-align: middle;
+            .form-check {
+                .form-check-input {
+                    &:checked {
+                        background-color: $green;
+                        border-color: $green;
+                    }
+                }
+            }
+        }
+        thead {
+            th {
+                background-color: $white;
+                border: 0;
+            }
+        }
+        tbody {
+            tr {
+                &:nth-child(2n+1) {
+                    td {
+                        background: $lightGreyTint0;
+                    }
+                }
+                &:nth-child(2n) {
+                    td {
+                        background: $white;
+                    }
+                }
+            }
+            td {
+                border: 0;
+                .user-name {
+                    @include flex;
+                    @include aligncenter;
+                    .user-image {
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        img {
+                            max-width: none;
+                            width: 100%;
+                            height: 100%;
+                            @include object-cover;
+                        }
+                    }
+                    span {
+                        padding-left: 5px;
+                    }
+                }
+                span {
+                    color: $black;
+                    font-weight: 700;
+                    &.present,
+                    &.absent {
+                        font-size: 20px;
+                    }
+                    &.green,
+                    &.present {
+                        color: $green;
+                    }
+                    &.absent {
+                        color: $red;
+                    }
+                }
+                .badge {
+                    padding: 0 0;
+                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+                    border-radius: 100px;
+                    padding: 10px 30px;
+                    font-size: 14px;
+                    &.badge-red {
+                        background: rgba(255, 43, 43, 0.1);
+                        border: 1px solid rgba(255, 43, 43, 0.5);
+                        color: $red;
+                    }
+                    &.badge-blue {
+                        background: rgba(26, 122, 248, 0.1);
+                        border: 1px solid rgba(26, 122, 248, 0.5);
+                        color: $dark;
+                    }
+                }
+                .table-select {
+                    background-color: $white;
+                    background-position: 90% center;
+                    width: 100%;
+                    max-width: 130px;
+                    min-width: 130px;
+                    height: 40px;
+                    font-weight: 700;
+                    padding: 0 30px 0 15px;
+                    border: 1px solid $grey;
+                    border-radius: 50px;
+                }
+                .departmentSelect {
+                    .table-select {
+                        background-color: rgba(141,197,66,0.1);
+                        border-color: rgba(141,197,66,0.5);
+                    }
+                }
+                .designationSelect {
+                    .table-select {
+                        background-color: rgba(26,122,248,0.1);
+                        border-color: rgba(26,122,248,0.5);
+                    }
+                }
+                .actionIcons {
+                    ul {
+                        @include flex;
+                        @include aligncenter;
+                        li {
+                            font-size: 16px;
+                            + li {
+                                margin-left: 15px;
+                            }
+                            a, button {
+                                display: inline-block;
+                            }
+                            .bin {
+                                color: $red;
+                            }
+                        }
+                    }
+                }
+                .btn {
+                    padding: 0;
+                    margin-right: 5px;
+                    img {
+                        width: 100%;
+                        max-width: 20px;
+                    }
+                    &:focus, &:active {
+                        outline: none;
+                        box-shadow: none;
+                        border-color: transparent;
+                    }
+                }
+            }
+            .tags {
+                color: $dark;
+                border-radius: 100px;
+                padding: 7px 30px;
+                display: inline-block;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+                min-width: 130px;
+                max-width: 130px;
+                text-align: center;
+                &.approve {
+                    background: rgba(26, 122, 248, 0.1);
+                    border: 1px solid rgba(26, 122, 248, 0.5);
+                }
+                &.reject {
+                    color: $red;
+                    background-color: rgba(255, 43, 43, 0.2);
+                    border: 1px solid $red;
+                }
+            }
+
+            .form-check {
+                .form-check-input {
+                    border-color: $dark;
+                    &:checked {
+                        border-color: $green;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.salaryTable {
+    .table {
+        border: 1px solid $lightGrey3;
+        border-radius: 2px;
+        tr {
+            td {
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+
+//Employee starst
+.dashboardSection {
+    &__body {
+        background: $white;
+        padding: 15px;
+        .employeeCard {
+            background: $white;
+            border: 2px solid $whiteTint1;
+            box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.06);
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;        
+            .head {
+                display: flex;
+                justify-content: space-between;
+        
+                img {
+                    width: 100%;
+                    max-width: 25px;
+                }
+        
+                .dropdown {
+                    button {
+                        padding: 0;
+                        background-color: transparent;
+                        border: 0;
+        
+                        img {
+                            max-width: 10px;
+                        }
+        
+                        &::after {
+                            display: none;
+                        }
+                    }
+                }
+            }        
+            .employeeBody {
+                text-align: center;
+        
+                img {
+                    width: 100%;
+                    max-width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+        
+                h5 {
+                    color: $green;
+                    font-size: 20px;
+                    font-weight: 800;
+                    margin: 10px 0;
+                }
+        
+                p {
+                    color: $dark;
+                    margin-bottom: 10px;
+                }
+        
+                .designation {
+                    background: rgba(26, 122, 248, 0.1);
+                    border: 1px solid rgba(26, 122, 248, 0.5);
+                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+                    border-radius: 100px;
+                    padding: 8px 15px;
+                    display: inline-block;
+                    font-weight: 700;
+                }
+        
+                .detailLink {
+                    display: block;
+                    background-color: $green;
+                    border: 1px solid $green;
+                    border-radius: 4px;
+                    color: $white;
+                    font-weight: 700;
+                    padding: 10px;
+                    font-size: 16px;
+                    margin-top: 15px;
+                }
+            }
+        }
+        .outerSection {
+            display: flex;
+            gap: 20px;
+            @include small-laptop {
+                gap: 10px;
+            }
+            .imgSection {
+                img {
+                    width: 100%;
+                    max-width: 100px;
+                    height: 100px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                    @include large-pc {
+                        max-width: 80px;
+                        height: 80px;
+                    }
+                    @include small-laptop {
+                        max-width: 60px;
+                        height: 60px;
+                    }
+                }
+            }
+            .detailSection {
+                h6 {
+                    color: $green;
+                }
+                small {
+                    color: $lightGreyTint1;
+                    font-weight: 700;
+                    margin-bottom: 5px;
+                    display: block;
+                }
+                p {
+                    color: $dark;
+                }
+                a {
+                    background-color: $green;
+                    color: $white;
+                    font-weight: 700;
+                    font-size: 16px;
+                    display: inline-block;
+                    margin-top: 10px;
+                    padding: 8px 20px;
+                    border: 1px solid $green;
+                    border-radius: 4px;
+                    @include small-laptop {
+                        padding: 5px 12px;
+                    }
+                }
+            }
+        }
+        .commonDetail {
+            p {
+                color: $dark;
+                margin-bottom: 10px;
+                &.green {
+                    color: $green;
+                }
+                @include small-laptop {
+                    font-size: 14px;
+                }
+            }
+            &.borderSection {
+                position: relative;
+                &::before {
+                    @include position(absolute, $top: 0, $right: null, $bottom: null, $left: -60px);
+                    content: " ";
+                    width: 2px;
+                    height: 100%;
+                    border: 1px dashed $lightGreyTint1;
+                    @include large-laptop {
+                        left: -30px;
+                    }
+                    @include large-pc {
+                        left: -30px;
+                    }
+                    @include large-pc2 {
+                        left: -20px;
+                    }
+                    @include phone-landscape {
+                        display: none;
+                    }
+                }
+                &::after {
+                    @include position(absolute, $top:0, $right:40px, $bottom:null, $left:null);
+                    content: " ";
+                    width: 2px;
+                    height: 100%;
+                    border: 1px dashed $lightGreyTint1;
+                    @include large-laptop {
+                        right: 20px;
+                    }
+                    @include large-pc {
+                        right: 10px;
+                    }
+                    @include large-pc2 {
+                        right: 0;
+                    }
+                    @include small-laptop {
+                        right: -10px;
+                    }
+                    @include phone-landscape {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+//Employee ends
+
+
+//Profile starts
+.profileCard {
+    position: relative;
+    background-color: $white;
+    padding: 15px;
+    &.extraPadding {
+        padding: 30px 22px 40px;
+    }
+    a.editIcon {
+        @include position(absolute, $top:10px, $right:10px, $bottom:null, $left:null);
+    }
+    h3 {
+        color: $dark;
+        font-weight: 700;
+        font-size: 22px;
+        margin-bottom: 20px;
+        @include phone-landscape {
+            font-size: 20px;
+        }
+    }
+    p {
+        color: $dark;
+        margin-bottom: 10px !important;
+        font-weight: 500;
+        .red {
+            color: $red;
+        }
+        &.green {
+            color: $green;
+        }
+        &.warning {
+            span {
+                font-size: 8px;
+                background: $creemTint1;
+                border: 1px solid $creemTint2;
+                border-radius: 3px;
+                padding: 4px 5px;
+                img {
+                    width: 100%;
+                    max-width: 10px;
+                    margin-right: 5px;
+                }
+            }
+        }
+
+        &.not-verify {
+            span {
+                font-size: 12px;
+                background: $greyTint1;
+                border: 1px solid $greyTint1;
+                border-radius: 3px;
+                padding: 4px 5px;
+            }
+        }
+    }
+    .form-check {
+        .form-check-label {
+            font-weight: 600;
+        }
+        .form-check-input {
+            border-color: $dark;
+        }
+    }
+    hr {
+        border-top: 1px solid rgba(31, 31, 31, 0.1);
+    }
+    .addBtn {
+        color: $green;
+        font-weight: 700;
+        display: inline-block;
+        margin-top: 10px;
+        img {
+            width: 100%;
+            max-width: 18px;
+        }
+    }
+    .eduList {
+        padding-left: 20px;
+        li {
+            position: relative;
+            padding-bottom: 10px;
+            &::before {
+                position: absolute;
+                content: " ";
+                width: 10px;
+                height: 10px;
+                background-color: $lightGreyTint2;
+                border-radius: 50%;
+                left: -20px;
+                top: 4px;
+            }
+            &::after {
+                position: absolute;
+                content: " ";
+                width: 3px;
+                height: 100%;
+                background-color: $lightGreyTint2;
+                left: -16px;
+                top: 4px;
+            }
+            p:last-child {
+                margin-bottom: 0 !important;
+            }
+            &:last-child {
+                padding-bottom: 0;
+            }
+            .grey {
+                color: $lightGrey;
+                font: 13px;
+            }
+            p {
+                &.grey {
+                    color: $lightGrey;
+                }
+            }
+        }
+    }
+    .leaveCard {
+        border: 1px solid rgba(220, 220, 215, 0.5);
+        border-radius: 6px;
+        padding: 20px;
+        text-align: center;
+        @include phone-landscape {
+            margin-bottom: 10px;
+        }
+        h4 {
+            font-size: 22px;
+            color: $dark;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        p {
+            color: $dark;
+            font-weight: 500;
+        }
+    }
+    .pageFilter {
+        .form-floating {
+            .formIcon {
+                @include position(absolute, $top:12px, $right:10px, $bottom:null, $left:null);
+            }
+        }
+    }
+    .btn-group {
+        .btn {
+            border-color: $lightGrey3;
+            font-size: 14px;
+            color: $dark;
+            padding: 8px 30px;
+            border-radius: 4px;
+            font-weight: 700;
+            span {
+                img {
+                    width: 100%;
+                    max-width: 10px;
+                }
+            }
+        }
+    }
+    .company {
+        @include flex;
+        gap: 20px;
+        margin-top: 10px;
+        &__logo {
+            width: 38px;
+        }
+        &__name {
+            &--right {
+                text-align: right;
+            }
+            h4 {
+                color: $dark;
+                font-size: 16px;
+                font-weight: 700;
+            }
+            p {
+                color: $lightGrey;
+                font-size: 14px;
+            }
+        }
+    }
+    .employeeDetail {
+        margin-top: 20px;
+        h5 {
+            font-size: 20px;
+            color: $green;
+        }
+        p {
+            small {
+                color: $lightGreyTint1;
+                font-size: 12px;
+            }
+        }
+    }
+}
+//Profile ends
+
+
+/*Table Responsive*/
+.commonTableResponsive {
+    @include small-pc {
+        table {
+            tr {
+                display: block;
+                margin-bottom: .625em;
+                border-bottom: 2px solid $green;
+                th {
+                    display: none;
+                }
+            }
+            td {
+                display: block;
+                font-size: .8em;
+                border-bottom: 1px solid $grey;
+                text-align: right;
+                &::before {
+                    content: attr(data-label);
+                    float: left;
+                    font-weight: 800;
+                }
+                &:last-child {
+                    border-bottom: 0;
+                    .dropdown-toggle {
+                        i {
+                            font-size: 18px;
+                            color: $grey;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.familyInformation {
+        table {
+            td {
+                &:last-child {
+                    .dropdown-toggle {
+                        i {
+                            font-size: 18px;
+                            color: $grey;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//Modals starts
+.personalInfo {
+    .modal-content {
+        border-radius: 5px;
+        .modal-header {
+            border-bottom: 0;
+            padding-bottom: 0;
+            .btn-close {
+                background-image: url(../../images/iconCross.svg);
+                background-size: 25px;
+                opacity: 1;
+                box-shadow: none;
+            }
+        }
+        .modal-body {
+            h3 {
+                color: $dark;
+                font-size: 22px;
+                font-weight: 700;
+                margin-bottom: 30px;
+                @include phone-landscape {
+                    margin-bottom: 0;
+                }
+                &.green {
+                    color: $green;
+                }
+            }
+            .userProfileSection {
+                max-width: 150px;
+                height: 150px;
+                margin: 0 auto;
+                position: relative;
+                overflow: hidden;
+                border-radius: 50%;
+                border: 1px solid $green;
+                img {
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+                span {
+                    @include position(absolute, $top: null, $right: null, $bottom: 0, $left: 0);
+                    width: 100%;
+                    text-align: center;
+                    background: rgba(31, 31, 31, 0.4);
+                    color: $white;
+                    cursor: pointer;
+                    padding: 4px 0;
+                    font-weight: 700;
+                    input {
+                        @include position(absolute, $top: null, $right: null, $bottom: null, $left: 0);
+                        width: 100%;
+                        opacity: 0;
+                        cursor: pointer;
+                    }
+                }
+            }
+           .addBtn {
+            color: $green;
+            font-weight: 700;
+            display: inline-block;
+           }
+           .fileUploader {
+                background-color: $lightGrey1;
+                border: 1px solid $lightGrey3;
+                text-align: center;
+                border-radius: 4px;
+                height: 120px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                position: relative;
+                span {
+                    display: block;
+                    color: $dark;
+                    font-size: 14px;
+                }
+                input {
+                    @include position(absolute, $top:0, $left: 0, $right: null, $bottom: null);
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                }
+           }
+           .uploadFilename {
+                margin-top: 5px;
+                font-size: 10px;
+                color: $dark;
+                font-weight: 600;
+           }
+           .form-check {
+            p {
+                color: $dark;
+                font-size: 14px;
+            }
+           }
+        }
+    }
+}
+//Modal ends
+
+// setting starts
+.setting {
+    ul {
+        li {
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            a {
+                &:hover {
+                    color: $green;
+                }
+            }
+        }
+    }
+    .dashboardSection__body {
+        border-radius: 5px;
+        border: 2px solid $whiteTint1;
+        background: $white;
+        box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.06);
+        h4 {
+            color: $dark;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        .form-switch {
+            .form-check-input {
+                width: 45px;
+                height: 25px;
+                margin: 0;
+            }
+        }
+        &.leaveList {
+            position: sticky;
+            top: 80px;
+        }
+    }
+    .punchSection {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+        .punchImg {
+            width: 40px;
+            img {
+                width: 100%;
+            }
+        }
+        .punchTime {
+            p {
+                color: $dark;
+                font-size: 14px;
+                span.green {
+                    color: $green;
+                }
+            }
+        }
+    }
+    .punchTimer {
+        .timeWrapper {
+            margin: 40px 0 55px;
+            &__circle {
+                position: relative;
+                background-color: $green;
+                width: 132px;
+                height: 132px;
+                margin: 0 auto;
+                border-radius: 50%;
+                animation: pulseShaddow 2s infinite;
+                .clock {
+                    @include position(absolute, $top:50%, $left: 50%, $right: null, $bottom: null);
+                    transform: translate(-50%, -50%);
+                    font-size: 30px;
+                    color: $white;
+                    font-weight: 700;
+                }
+                .circle-progress {
+                    fill: $green;
+                }
+                .outerCircle {
+                    stroke: $green;
+                }
+            }
+        }
+        .form-check {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 460px;
+            min-width: 460px;
+            border-radius: 100px;
+            border: 2px solid $whiteTint1;
+            background: $white;
+            padding: 18px 30px;
+            box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.06);
+            margin: 0 auto;
+            p {
+                margin: 0;
+                font-size: 18px;
+                font-weight: 700;
+                &.green {
+                    color: $green;
+                }
+                &.red {
+                    color: $red;
+                }
+            }
+        }
+        .extraTime {
+            margin: 55px 0 30px;
+            h5, h6 {
+                font-size: 14px;
+                color: $dark;
+            }
+            h5 {
+                font-weight: 600;
+                margin-top: 10px;
+            }
+            h6 {
+                font-weight: 700;
+                &.break {
+                    color: $red;
+                }
+                &.overTime {
+                    color: $green;
+                }            
+            }
+        }
+    }
+    .attendanceCard {
+        border-radius: 5px;
+        border: 2px solid $whiteTint1;
+        background: $white;
+        box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.06);
+        padding: 20px 20px;
+        p {
+            margin-bottom: 10px;
+            &.progressText {
+                font-weight: 700;
+                margin-bottom: 20px;
+            }
+            &.orange {
+                color: $orange;
+            }
+            &.blue {
+                color: $navyBlue;
+            }
+            &.green {
+                color: $green;
+            }
+            &.red {
+                color: $red;
+            }
+            &.grey {
+                color: $black;
+            }
+        }
+        .progress {
+            .progress-bar {
+                &.bg-warning {
+                    background-color: $orange !important;
+                }
+                &.bg-primary {
+                    background-color: $navyBlue !important;
+                }
+                &.bg-success {
+                    background-color: $green !important;
+                }
+                &.bg-danger {
+                    background-color: $red !important;
+                }
+                &.bg-grey {
+                    background-color: $lightGrey !important;
+                }
+            }
+        }
+    }
+}
+// setting ends
+
+
+// date picker starts
+// .ui-datepicker-prev {
+//     background-image: url(../../images/arrowLeft.svg);
+//     background-size: 20px;
+//     background-repeat: no-repeat;
+//     background-position: center;
+// }
+// .ui-datepicker-next {
+//     background-image: url(../../images/arrowRight.svg);
+//     background-size: 20px;
+//     background-repeat: no-repeat;
+//     background-position: center;
+// }
+.datepicker {
+    table {
+        .day {
+            &.today {
+                background: $green;
+            }
+        }
+    }
+}
+//Date picker ends
+
+
+//Select2 starts
+.select2-container {
+    z-index: 1111;
+}
+.select2 {
+    width: 100% !important;
+    .select2-dropdown {
+        z-index: 1111;
+    }
+    .select2-selection {
+        height: 45px;
+        padding: 7px 0;
+        border-color: $lightGrey3;
+        .img-flag {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+        }
+        &__arrow {
+            background-image: url(../../images/dropdownIcon.svg);
+            background-size: 13px;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 45px !important;
+            b {
+                display: none;
+            }
+        }
+    }
+}
+.select2-results {
+        &__option {
+            img.img-flag {
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+            }
+            &.select2-results__option--highlighted {
+                background-color: $lightGrey3 !important;
+                color: $dark !important;
+            }
+        }
+}
+
+
+.profileCard{
+    .eduList{
+        .editIcon{
+            .fa-trash-can:before{
+                color: red;
+            }
+        }
+    }
+}
+//Seleft2 ends

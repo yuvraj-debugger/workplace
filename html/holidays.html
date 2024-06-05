@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <!-- Favicon -->
+    <link rel="icon" href="images/mini-logo-green.svg" sizes="any" type="image/svg+xml">
+    <title>Worksuit Tool - Holidays</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <main class="main-wrapper">
+
+        <header class="header">
+            <div class="header-left">
+                <div class="miniLogo">
+                    <a href="index.html">
+                        <img src="images/mini-logo.svg" alt="mini-logo" />
+                    </a>
+                </div>
+            </div>
+            <div class="header-center">
+                <h1>Softuvo Solutions</h1>
+            </div>
+            <a id="toggle_btn" href="javascript:void(0);">
+                <span class="bar-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </a>
+            <ul class="header-new-menu">
+                <li>
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">Clients</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="javascript:void(0);">Clients</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">Projects</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="javascript:void(0);">Projects</a>
+                        <a class="dropdown-item" href="javascript:void(0);">Tasks</a>
+                        <a class="dropdown-item" href="javascript:void(0);">Task Board</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">Leads</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="javascript:void(0);">Leads</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">Tickets</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="javascript:void(0);">Tickets</a>
+                    </div>
+                </li>
+            </ul>
+            <a id="mobile_btn" class="mobile_btn" href="#sidebar"><i class="fa-solid fa-bars"></i></a>
+            <div class="user-menu">
+                <div class="searchbar">
+                    <input class="searchbar__field" type="search" placeholder="Search here">
+                    <button class="searchbar__button" type="button"><i
+                            class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div class="headerIcons">
+                    <ul>
+                        <li class="headerIcons__icon"><button type="button"><img src="images/header/check-icon.svg"
+                                    alt=""> <span class="counter">2</span></button></li>
+                        <li class="headerIcons__icon"><button type="button"><img src="images/header/time-icon.svg"
+                                    alt=""> <span class="counter">5</span></button></li>
+                        <li class="headerIcons__icon"><button type="button"><img src="images/header/add-icon.svg"
+                                    alt=""> <span class="counter">2</span></button></li>
+                        <li class="headerIcons__icon"><button type="button"><img src="images/header/bell-icon.svg"
+                                    alt=""> <span class="counter">12</span></button></li>
+                    </ul>
+                </div>
+                <div class="avatar">
+                    <div class="dropdown">
+                        <button class="avatar__button dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <img class="avatar__image" src="images/user-img.jpg" alt="user-img" />
+                            <span>Franklin Jr.</span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a href="javascript:void(0);">My Profile</a></li>
+                            <li><a href="javascript:void(0);">Setting</a></li>
+                            <li><a href="javascript:void(0);">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header><!--Header End-->
+
+        <div class="sidebar" id="sidebar">
+            <div class="slimScrollDiv">
+                <div class="sidebar-left slimscroll">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a href="javascript:void(0);" class="nav-link active" id="home-tab" data-bs-toggle="tab"
+                                data-bs-target="#home" type="button" role="tab" aria-controls="home"
+                                aria-selected="true"><span data-bs-delay='{"show":"1000", "hide":"0"}'
+                                    data-bs-offset="0,10" data-bs-toggle="tooltip" data-bs-placement="right"
+                                    data-bs-title="Home"><img src="images/navbar/home-icon.svg" alt="" /></span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:void(0);" class="nav-link" id="app-tab" data-bs-toggle="tab"
+                                data-bs-target="#app" type="button" role="tab" aria-controls="app"
+                                aria-selected="false"><span data-bs-delay='{"show":"1000", "hide":"0"}'
+                                    data-bs-offset="0,10" data-bs-toggle="tooltip" data-bs-placement="right"
+                                    data-bs-title="App"><img src="images/navbar/app-icon.svg" alt="" /></span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:void(0);" class="nav-link" id="employees-tab" data-bs-toggle="tab"
+                                data-bs-target="#employees" type="button" role="tab" aria-controls="employees"
+                                aria-selected="false"><span data-bs-delay='{"show":"1000", "hide":"0"}'
+                                    data-bs-offset="0,10" data-bs-toggle="tooltip" data-bs-placement="right"
+                                    data-bs-title="Employees"><img src="images/navbar/employees-icon.svg"
+                                        alt="" /></span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:void(0);" class="nav-link" id="clients-tab" data-bs-toggle="tab"
+                                data-bs-target="#clients" type="button" role="tab" aria-controls="clients"
+                                aria-selected="false"><span data-bs-delay='{"show":"1000", "hide":"0"}'
+                                    data-bs-offset="0,10" data-bs-toggle="tooltip" data-bs-placement="right"
+                                    data-bs-title="Clients"><img src="images/navbar/clients-icon.svg"
+                                        alt="" /></span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sidebar-right">
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <p>Leave</p>
+                        <ul>
+                            <li><a class="active" href="holidays.html">Holidays</a></li>
+                            <li><a href="leave-admin.html">Leaves (Admin)</a></li>
+                            <li><a href="leave-employee.html">Leave (Employees)</a></li>
+                            <li><a href="leave-settings.html">Leave Settings</a></li>
+                            <li><a href="javascript:void(0);">Pending</a></li>
+                            <li><a href="javascript:void(0);">Team on Leave</a></li>
+                            <li><a href="javascript:void(0);">Apply Leave</a></li>
+                            <li><a href="javascript:void(0);">History</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="app" role="tabpanel" aria-labelledby="app-tab">
+                        <p>App</p>
+                        <ul>
+                            <li><a href="javascript:void(0);">Admin Dashboard</a></li>
+                            <li><a href="javascript:void(0);">Employee Dashboard</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="employees" role="tabpanel" aria-labelledby="employees-tab">
+                        <p>Employees</p>
+                        <ul>
+                            <li><a href="javascript:void(0);">Admin Dashboard</a></li>
+                            <li><a href="javascript:void(0);">Employee Dashboard</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="clients" role="tabpanel" aria-labelledby="clients-tab">
+                        <p>Clients</p>
+                        <ul>
+                            <li><a href="javascript:void(0);">Admin Dashboard</a></li>
+                            <li><a href="javascript:void(0);">Employee Dashboard</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div><!--Sidebar End-->
+
+        <div class="page-wrapper">
+            <div class="content container-fluid">
+                <div class="page-head-box">
+                    <h3>Holidays</h3>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="index.html">Dashboard</a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">Holidays</li>
+                        </ol>
+                    </nav>
+                </div>
+
+                <div class="pageFilter mb-3">
+                    <div class="row">
+                        <div class="col-xl-7">
+                            <div class="leftFilters">
+                                <div class="form-floating">
+                                    <select class="form-select" id="floatingSelect"
+                                        aria-label="Floating label select example">
+                                        <option selected>All</option>
+                                        <option value="1">All</option>
+                                        <option value="2">All</option>
+                                        <option value="3">All</option>
+                                    </select>
+                                    <label for="floatingSelect">Employee</label>
+                                </div>
+
+                                <div class="form-floating">
+                                    <select class="form-select" id="floatingSelect"
+                                        aria-label="Floating label select example">
+                                        <option selected>All</option>
+                                        <option value="1">All</option>
+                                        <option value="2">All</option>
+                                        <option value="3">All</option>
+                                    </select>
+                                    <label for="floatingSelect">Designation</label>
+                                </div>
+
+                                <button class="btn btn-mark"><img src="images/checkMarkIcon.svg" /> Mark Default
+                                    Holidays</button>
+
+                                <button class="btn btn-search"><img src="images/iconSearch.svg" /> Search here</button>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-5">
+                            <div class="rightFilter">
+                                <button class="">
+                                    <svg width="30" height="27" viewBox="0 0 30 27" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M0 3.375C0 1.51348 1.49479 0 3.33333 0H11.6667V6.75C11.6667 7.6834 12.4115 8.4375 13.3333 8.4375H20V15.1875H11.25C10.5573 15.1875 10 15.7518 10 16.4531C10 17.1545 10.5573 17.7188 11.25 17.7188H20V23.625C20 25.4865 18.5052 27 16.6667 27H3.33333C1.49479 27 0 25.4865 0 23.625V3.375ZM20 17.7188V15.1875H25.7344L23.7031 13.1309C23.2135 12.6352 23.2135 11.8336 23.7031 11.3432C24.1927 10.8527 24.9844 10.8475 25.4688 11.3432L29.6354 15.5619C30.125 16.0576 30.125 16.8592 29.6354 17.3496L25.4688 21.5684C24.9792 22.0641 24.1875 22.0641 23.7031 21.5684C23.2188 21.0727 23.2135 20.2711 23.7031 19.7807L25.7344 17.724H20V17.7188ZM20 6.75H13.3333V0L20 6.75Z"
+                                            fill="#1F1F1F" />
+                                    </svg>
+                                </button>
+
+                                <button class="">
+                                    <svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M22 17.875C22.4815 17.8752 22.9445 18.0607 23.293 18.393C23.6415 18.7253 23.8488 19.1789 23.8719 19.6599C23.895 20.1409 23.7323 20.6123 23.4173 20.9765C23.1023 21.3407 22.6593 21.5698 22.18 21.6162L22 21.625H2C1.51848 21.6248 1.05551 21.4393 0.707017 21.107C0.358527 20.7747 0.151235 20.3211 0.128095 19.8401C0.104954 19.3591 0.26774 18.8877 0.582719 18.5235C0.897699 18.1593 1.34073 17.9302 1.82 17.8838L2 17.875H22ZM22 9.125C22.4973 9.125 22.9742 9.32254 23.3258 9.67417C23.6775 10.0258 23.875 10.5027 23.875 11C23.875 11.4973 23.6775 11.9742 23.3258 12.3258C22.9742 12.6775 22.4973 12.875 22 12.875H2C1.50272 12.875 1.02581 12.6775 0.674175 12.3258C0.322544 11.9742 0.125 11.4973 0.125 11C0.125 10.5027 0.322544 10.0258 0.674175 9.67417C1.02581 9.32254 1.50272 9.125 2 9.125H22ZM22 0.375C22.4973 0.375 22.9742 0.572544 23.3258 0.924175C23.6775 1.27581 23.875 1.75272 23.875 2.25C23.875 2.74728 23.6775 3.22419 23.3258 3.57583C22.9742 3.92746 22.4973 4.125 22 4.125H2C1.50272 4.125 1.02581 3.92746 0.674175 3.57583C0.322544 3.22419 0.125 2.74728 0.125 2.25C0.125 1.75272 0.322544 1.27581 0.674175 0.924175C1.02581 0.572544 1.50272 0.375 2 0.375H22Z"
+                                            fill="#1F1F1F" />
+                                    </svg>
+                                </button>
+
+                                <button class="">
+                                    <svg width="27" height="27" viewBox="0 0 27 27" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M0 22.95C0 25.245 1.755 27 4.05 27H22.95C25.245 27 27 25.245 27 22.95V12.15H0V22.95ZM22.95 2.7H20.25V1.35C20.25 0.54 19.71 0 18.9 0C18.09 0 17.55 0.54 17.55 1.35V2.7H9.45V1.35C9.45 0.54 8.91 0 8.1 0C7.29 0 6.75 0.54 6.75 1.35V2.7H4.05C1.755 2.7 0 4.455 0 6.75V9.45H27V6.75C27 4.455 25.245 2.7 22.95 2.7Z"
+                                            fill="#1F1F1F" />
+                                    </svg>
+
+                                </button>
+
+                                <a class="addBtn" data-bs-toggle="modal" data-bs-target="#holidayModal"
+                                    href="javascript:void(0);"><i class="fa-solid fa-plus"></i> Add Holidays</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboardSection">
+                    <div class="dashboardSection__body">
+                        <div class="commonDataTable">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <div class="form-check d-flex justify-content-center">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                </div>
+                                            </th>
+                                            <th>Date</th>
+                                            <th>Occasion</th>
+                                            <th>Day</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="form-check d-flex justify-content-center">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                </div>
+                                            </td>
+                                            <td>31 Dec 2023</td>
+                                            <td>New Year</td>
+                                            <td><span class="badge badge-blue">Thursday</span></td>
+                                            <td>
+                                                <div class="actionIcons">
+                                                    <ul>
+                                                        <li><a class="edit" href="javascript:void(0);"><i
+                                                                    class="fa-solid fa-pen"></i></a></li>
+                                                        <li><button class="bin" type="button"><i
+                                                                    class="fa-regular fa-trash-can"></i></button></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <div class="form-check d-flex justify-content-center">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                </div>
+                                            </td>
+                                            <td>31 Dec 2023</td>
+                                            <td>New Year</td>
+                                            <td><span class="badge badge-blue">Thursday</span></td>
+                                            <td>
+                                                <div class="actionIcons">
+                                                    <ul>
+                                                        <li><a class="edit" href="javascript:void(0);"><i
+                                                                    class="fa-solid fa-pen"></i></a></li>
+                                                        <li><button class="bin" type="button"><i
+                                                                    class="fa-regular fa-trash-can"></i></button></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <div class="form-check d-flex justify-content-center">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                </div>
+                                            </td>
+                                            <td>31 Dec 2023</td>
+                                            <td>New Year</td>
+                                            <td><span class="badge badge-blue">Thursday</span></td>
+                                            <td>
+                                                <div class="actionIcons">
+                                                    <ul>
+                                                        <li><a class="edit" href="javascript:void(0);"><i
+                                                                    class="fa-solid fa-pen"></i></a></li>
+                                                        <li><button class="bin" type="button"><i
+                                                                    class="fa-regular fa-trash-can"></i></button></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <div class="form-check d-flex justify-content-center">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                </div>
+                                            </td>
+                                            <td>31 Dec 2023</td>
+                                            <td>New Year</td>
+                                            <td><span class="badge badge-blue">Thursday</span></td>
+                                            <td>
+                                                <div class="actionIcons">
+                                                    <ul>
+                                                        <li><a class="edit" href="javascript:void(0);"><i
+                                                                    class="fa-solid fa-pen"></i></a></li>
+                                                        <li><button class="bin" type="button"><i
+                                                                    class="fa-regular fa-trash-can"></i></button></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <div class="form-check d-flex justify-content-center">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                </div>
+                                            </td>
+                                            <td>31 Dec 2023</td>
+                                            <td>New Year</td>
+                                            <td><span class="badge badge-blue">Thursday</span></td>
+                                            <td>
+                                                <div class="actionIcons">
+                                                    <ul>
+                                                        <li><a class="edit" href="javascript:void(0);"><i
+                                                                    class="fa-solid fa-pen"></i></a></li>
+                                                        <li><button class="bin" type="button"><i
+                                                                    class="fa-regular fa-trash-can"></i></button></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <div class="form-check d-flex justify-content-center">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                </div>
+                                            </td>
+                                            <td>31 Dec 2023</td>
+                                            <td>New Year</td>
+                                            <td><span class="badge badge-blue">Thursday</span></td>
+                                            <td>
+                                                <div class="actionIcons">
+                                                    <ul>
+                                                        <li><a class="edit" href="javascript:void(0);"><i
+                                                                    class="fa-solid fa-pen"></i></a></li>
+                                                        <li><button class="bin" type="button"><i
+                                                                    class="fa-regular fa-trash-can"></i></button></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <div class="form-check d-flex justify-content-center">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                </div>
+                                            </td>
+                                            <td>31 Dec 2023</td>
+                                            <td>New Year</td>
+                                            <td><span class="badge badge-blue">Thursday</span></td>
+                                            <td>
+                                                <div class="actionIcons">
+                                                    <ul>
+                                                        <li><a class="edit" href="javascript:void(0);"><i
+                                                                    class="fa-solid fa-pen"></i></a></li>
+                                                        <li><button class="bin" type="button"><i
+                                                                    class="fa-regular fa-trash-can"></i></button></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <div class="form-check d-flex justify-content-center">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                </div>
+                                            </td>
+                                            <td>31 Dec 2023</td>
+                                            <td>New Year</td>
+                                            <td><span class="badge badge-blue">Thursday</span></td>
+                                            <td>
+                                                <div class="actionIcons">
+                                                    <ul>
+                                                        <li><a class="edit" href="javascript:void(0);"><i
+                                                                    class="fa-solid fa-pen"></i></a></li>
+                                                        <li><button class="bin" type="button"><i
+                                                                    class="fa-regular fa-trash-can"></i></button></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <div class="form-check d-flex justify-content-center">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                </div>
+                                            </td>
+                                            <td>31 Dec 2023</td>
+                                            <td>New Year</td>
+                                            <td><span class="badge badge-blue">Thursday</span></td>
+                                            <td>
+                                                <div class="actionIcons">
+                                                    <ul>
+                                                        <li><a class="edit" href="javascript:void(0);"><i
+                                                                    class="fa-solid fa-pen"></i></a></li>
+                                                        <li><button class="bin" type="button"><i
+                                                                    class="fa-regular fa-trash-can"></i></button></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <div class="form-check d-flex justify-content-center">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                </div>
+                                            </td>
+                                            <td>31 Dec 2023</td>
+                                            <td>New Year</td>
+                                            <td><span class="badge badge-blue">Thursday</span></td>
+                                            <td>
+                                                <div class="actionIcons">
+                                                    <ul>
+                                                        <li><a class="edit" href="javascript:void(0);"><i
+                                                                    class="fa-solid fa-pen"></i></a></li>
+                                                        <li><button class="bin" type="button"><i
+                                                                    class="fa-regular fa-trash-can"></i></button></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- common pagination starts -->
+                        <div class="commonPagination my-4">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="commonPagination__content justify-content-end">
+                                        <p>Showing <span>1 to 10</span> of <span>16 entries</span></p>
+                                        <div class="paginationButton">
+                                            <a href="javascript:void(0);">Previous</a>
+                                            <a href="javascript:void(0);">1</a>
+                                            <a href="javascript:void(0);">2</a>
+                                            <a href="javascript:void(0);">Next</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- common pagination ends -->
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </main>
+
+
+    <!-- holiday modal starts -->
+    <div class="modal fade personalInfo" id="holidayModal" data-bs-backdrop="static" data-bs-keyboard="false"
+        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1> -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h3 class="text-center">Add Holiday</h3>
+                    <form action="" class="px-3">
+
+                        <div class="row">
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Date</label>
+                                    <input type="text" class="form-control datePicker" placeholder="Enter Date" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Occasion</label>
+                                    <input type="text" class="form-control" placeholder="Enter Occasion" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <div class="form-group mt-4">
+                                    <a class="addBtn my-3 d-block" href="javascript:void(0);">Add New <img
+                                            src="images/addIcon.svg"></a>
+                                    <button class="btn commonButton ">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- holidy modal ends -->
+
+
+    <div id="preloader"></div>
+
+    <!-- JavaScript Libraries -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.slimscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>
